@@ -6,8 +6,6 @@ table
       th Title
       th Content
       th
-      th
-      th
 
   tbody
     - @projects.each do |project|
@@ -15,9 +13,5 @@ table
         td = project.title
         td = project.content
         td = link_to 'Show', project
-        td = link_to 'Edit', edit_project_path(project)
-        td = link_to 'Destroy', project, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
-
-= link_to 'New Project', new_project_path
