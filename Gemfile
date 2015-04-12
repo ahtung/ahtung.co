@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'high_voltage', '~> 2.2.1'
 gem 'slim-rails'
 gem 'foundation-rails'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
