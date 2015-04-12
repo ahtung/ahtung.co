@@ -14,6 +14,7 @@ gem 'high_voltage', '~> 2.2.1'
 gem 'slim-rails'
 gem 'foundation-rails'
 gem 'rails_12factor'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
