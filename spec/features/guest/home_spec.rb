@@ -1,7 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'Home Page' do
-  before do
+RSpec.describe 'Home Page', type: :feature do
+  subject { page }
+
+  before :each do
     visit root_path
   end
 
