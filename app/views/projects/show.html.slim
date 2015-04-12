@@ -1,12 +1,8 @@
-p#notice = notice
-
-p
-  strong Title:
-  = @project.title
-p
-  strong Content:
-  = @project.content
-
-= link_to 'Edit', edit_project_path(@project)
-'|
-= link_to 'Back', projects_path
+.row.half
+  .columns.small-12
+    = link_to 'x', root_path
+    = @project.title
+    = image_tag '//lorempixel.com/400/200/'
+.row.half
+  .columns.small-12
+    = @project.content
