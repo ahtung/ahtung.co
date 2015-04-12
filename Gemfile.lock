@@ -60,6 +60,9 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.5.2)
+    foundation-rails (5.5.1.2)
+      railties (>= 3.1.0)
+      sass (>= 3.3.0, < 3.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     high_voltage (2.2.1)
@@ -181,6 +184,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
+  foundation-rails
   high_voltage (~> 2.2.1)
   jbuilder (~> 2.0)
   jquery-rails
