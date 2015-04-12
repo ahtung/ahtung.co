@@ -1,17 +1,7 @@
-h1 Listing projects
-
-table
-  thead
-    tr
-      th Title
-      th Content
-      th
-
-  tbody
+.row.half style="background:url(http://lorempixel.com/400/200/);background-size:cover;"
+  .columns.small-12
+    = link_to 'x', root_path
+.row.half
+  .columns.small-12
     - @projects.each do |project|
-      tr
-        td = project.title
-        td = project.content
-        td = link_to 'Show', project
-
-br
+      = link_to project.title, project
