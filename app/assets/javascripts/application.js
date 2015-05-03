@@ -21,13 +21,14 @@ $(function(){
   $(document).foundation();
 
   $(document).on('page:fetch', function() {
-
+    $('body').transition({ y: '-100vh' });
   });
 
   $(document).on('page:load', function() {
-    $('body').transition({ y: '-100vh' }, function() {
-      $('body').transition({ y: '+=100vh' });
-    });
+    // $('body').transition({ y: '-100vh' }, function() {
+      $('body').css({ y: '100vh' });
+      $('body').transition({ y: '-=100vh' });
+    // });
   });
 });
 
