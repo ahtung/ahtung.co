@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
+gem 'bundler', '>= 1.8.4'
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -20,6 +21,7 @@ gem 'rack-google-analytics'
 gem 'librato-rails'
 gem 'rails_admin'
 gem 'devise'
+gem 'turbolinks'
 
 group :development, :test do
   gem 'byebug'
@@ -32,4 +34,8 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery.transit', '~> 0.9.12'
 end

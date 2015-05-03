@@ -27,3 +27,8 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.back{
+  padding:.5em .5em;
+  background:#fff;
+}
