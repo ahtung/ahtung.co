@@ -16,6 +16,7 @@ gem 'foundation-rails'
 gem 'rails_12factor'
 gem 'newrelic_rpm'
 gem 'foreman'
+gem 'rack-google-analytics'
 
 group :development, :test do
   gem 'byebug'
