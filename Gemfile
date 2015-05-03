@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'foundation-rails'
 gem 'rails_12factor'
 gem 'newrelic_rpm'
+gem 'foreman'
 
 group :development, :test do
   gem 'byebug'
