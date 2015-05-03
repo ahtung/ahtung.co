@@ -20,12 +20,13 @@ $(function(){
   $(document).foundation();
 
   $(document).on('page:fetch', function() {
-    $('body').slideUp( "fast");
+
   });
 
-  $(document).on('page:receive', function() {
-    $('body').slideDown( "fast");
+  $(document).on('page:load', function() {
+    $('body').slideUp( "fast", function() {
+      $('body').slideDown( "fast");
+    });
   });
-
 });
 
