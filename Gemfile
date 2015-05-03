@@ -19,6 +19,7 @@ gem 'foreman'
 gem 'rack-google-analytics'
 gem 'librato-rails'
 gem 'rails_admin'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'
