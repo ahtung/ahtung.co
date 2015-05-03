@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require jquery.transit
 //= require_tree .
 
 $(function(){
@@ -24,8 +25,8 @@ $(function(){
   });
 
   $(document).on('page:load', function() {
-    $('body').slideUp( "fast", function() {
-      $('body').slideDown( "fast");
+    $('body').transition({ y: '-100vh' }, function() {
+      $('body').transition({ y: '+=100vh' });
     });
   });
 });
