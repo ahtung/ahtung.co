@@ -16,4 +16,16 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  $(document).foundation();
+
+  $(document).on('page:fetch', function() {
+    $('body').slideUp( "fast");
+  });
+
+  $(document).on('page:receive', function() {
+    $('body').slideDown( "fast");
+  });
+
+});
+
