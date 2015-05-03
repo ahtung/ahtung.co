@@ -13,6 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require turbolinks
+//= require jquery.transit
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  $(document).foundation();
+
+  $(document).on('page:fetch', function() {
+
+  });
+
+  $(document).on('page:load', function() {
+    $('body').transition({ y: '-100vh' }, function() {
+      $('body').transition({ y: '+=100vh' });
+    });
+  });
+});
+
