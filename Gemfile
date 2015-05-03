@@ -20,6 +20,7 @@ gem 'rack-google-analytics'
 gem 'librato-rails'
 gem 'rails_admin'
 gem 'devise'
+gem 'turbolinks'
 
 group :development, :test do
   gem 'byebug'
