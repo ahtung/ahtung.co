@@ -23,6 +23,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'turbolinks'
 gem 'asset_sync'
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug'
