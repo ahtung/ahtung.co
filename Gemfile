@@ -22,6 +22,7 @@ gem 'librato-rails'
 gem 'rails_admin'
 gem 'devise'
 gem 'turbolinks'
+gem 'asset_sync'
 
 group :development, :test do
   gem 'byebug'
