@@ -25,6 +25,7 @@ gem 'turbolinks'
 gem 'asset_sync'
 gem 'sitemap_generator'
 gem 'fog'
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug'
