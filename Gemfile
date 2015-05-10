@@ -23,6 +23,8 @@ gem 'rails_admin'
 gem 'devise'
 gem 'turbolinks'
 gem 'asset_sync'
+gem 'sitemap_generator'
+gem 'fog'
 
 group :development, :test do
   gem 'byebug'
