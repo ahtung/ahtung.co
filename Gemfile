@@ -22,6 +22,7 @@ gem 'librato-rails'
 gem 'rails_admin'
 gem 'devise'
 gem 'turbolinks'
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'byebug'
