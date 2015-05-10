@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount_roboto
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :projects

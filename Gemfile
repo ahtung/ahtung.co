@@ -26,6 +26,7 @@ gem 'asset_sync'
 gem 'sitemap_generator'
 gem 'fog'
 gem 'unicorn'
+gem 'roboto'
 
 group :development, :test do
   gem 'byebug'
