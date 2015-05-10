@@ -1,3 +1,4 @@
+# ProjectsController
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show]
   # GET /projects
@@ -10,7 +11,6 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
   end
-
 
   private
   # Use callbacks to share common setup or constraints between actions.
