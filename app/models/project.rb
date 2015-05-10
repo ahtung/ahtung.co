@@ -1,3 +1,4 @@
+# Project
 class Project < ActiveRecord::Base
   # Validations
   validates :title, presence: true
