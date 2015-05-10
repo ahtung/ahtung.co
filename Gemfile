@@ -11,7 +11,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'high_voltage', '~> 2.2.1'
+gem 'high_voltage', '~> 2.3.0'
 gem 'slim-rails'
 gem 'foundation-rails'
 gem 'rails_12factor'
@@ -35,6 +35,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'rubocop'
+  gem 'brakeman'
 end
 
 group :test do

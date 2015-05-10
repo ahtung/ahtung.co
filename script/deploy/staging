@@ -1,0 +1,11 @@
+#!/bin/bash
+set -x
+set -e
+
+export RAILS_ENV='staging'
+export RACK_ENV='staging'
+
+git push git@heroku.com:ahtung-staging.git develop:master
+heroku run rake db:migrate --app ahtung-staging
+heroku run rake sitemap:refresh --app ahtung-staging
+# bundle exec rake smoke:production

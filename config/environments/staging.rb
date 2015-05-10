@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Google Analytics
-  config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
+  # config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
   # S3
   config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
