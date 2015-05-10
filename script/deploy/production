@@ -5,7 +5,7 @@ set -e
 export RAILS_ENV='test'
 export RACK_ENV='test'
 
-git push git@heroku.com:ahtung.git develop:master
+git push git@heroku.com:ahtung.git master
 heroku run rake db:migrate --app ahtung
 heroku run rake sitemap:refresh --app ahtung
 # bundle exec rake smoke:production
