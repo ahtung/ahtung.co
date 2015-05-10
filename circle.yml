@@ -5,10 +5,10 @@ test:
     - bundle exec rake security
     # - bundle exec rake quality
 deployment:
-  # staging:
-  #   branch: develop
-  #   commands:
-  #     - ./script/deploy/staging
+  staging:
+    branch: develop
+    commands:
+      - ./script/deploy/staging
   production:
     branch: master
     commands:
