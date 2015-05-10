@@ -82,5 +82,5 @@ Rails.application.configure do
 
   # S3
   config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  config.assets.prefix = "/assets"
+  config.assets.prefix = '/assets'
 end
