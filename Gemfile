@@ -34,6 +34,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rubocop'
+  gem 'brakeman'
 end
 
 group :test do
