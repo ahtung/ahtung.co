@@ -28,6 +28,7 @@ gem 'fog', '~> 1.30.0'
 gem 'unicorn', '~> 4.9.0'
 gem 'roboto', '~> 0.2.0'
 gem 'rubocop'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'byebug'
