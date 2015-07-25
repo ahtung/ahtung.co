@@ -5,4 +5,5 @@
     = image_tag '//lorempixel.com/400/200/'
 .row.half
   .columns.small-12
-    = @project.content
+    - markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    = markdown.render(@project.content).html_safe
