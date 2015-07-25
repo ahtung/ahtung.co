@@ -85,5 +85,5 @@ Rails.application.configure do
   config.assets.prefix = '/assets'
 
   # Rails admin
-  config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+  config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
 end
