@@ -7,13 +7,6 @@
     = image_tag "https://images.unsplash.com/photo-1437941792454-bacef7a7f736?q=80&fm=jpg&s=9d54a5c69d3ae8ba1af0554649c24aa8", width: "100%"
 .section.white
   .row.container
-    h2.header Contact
-    p.grey-text.text-darken-3.lighten-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut finibus leo. Cras nec tortor at turpis pretium dapibus fermentum vitae ex. Duis gravida ac lorem sit amet molestie. Nam ut mauris eu sapien placerat semper in et felis. Aliquam faucibus lorem feugiat mattis facilisis. Phasellus elementum congue interdum. Aenean auctor metus turpis, id cursus lectus pellentesque quis. Pellentesque eu fringilla lorem. In volutpat tempus tortor vitae sollicitudin. In sed aliquam turpis, sed auctor velit. Nunc ullamcorper placerat tincidunt. Donec metus purus, hendrerit vitae mi vel, volutpat ultrices lectus. Etiam ultricies mauris ac libero aliquam, a vestibulum sapien imperdiet. Vivamus sodales ultricies dui. Aenean porttitor mauris sit amet magna interdum sagittis.
-.parallax-container
-  .parallax
-    = image_tag "https://images.unsplash.com/photo-1434543177303-ef2cc7707e0d?q=80&fm=jpg&s=e72664d5d9af677480d0f7337d0a74d2", width: '100%'
-.section.white
-  .row.container
     h2.header Works
     .row
       - @projects.each do |project|
@@ -26,6 +19,16 @@
               = "Sonra"
             .card-action
               = link_to project.title, project
+.parallax-container
+  .parallax
+    = image_tag "https://images.unsplash.com/photo-1434543177303-ef2cc7707e0d?q=80&fm=jpg&s=e72664d5d9af677480d0f7337d0a74d2", width: '100%'
+.section.white
+  .row.container
+    h2.header Contact
+    #map.pencil
+    p.grey-text.text-darken-3.lighten-3= mail_to "info@opotto.com", "email"
+    p.grey-text.text-darken-3.lighten-3= phone_number_link('90 312 284 31 48')
+    p.grey-text.text-darken-3.lighten-3= facebook_link('pages/Ahtung/1640658482879986')
 .parallax-container
   .parallax
     = image_tag "https://images.unsplash.com/photo-1428948304740-392e214d312f?q=80&fm=jpg&s=f5bf04e4900be46a52288bff07453250", width: '100%'
