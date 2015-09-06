@@ -30,5 +30,7 @@ $(function(){
       $('body').transition({ y: '-=100vh' });
     // });
   });
+
+  $('.parallax').parallax();
 });
 
