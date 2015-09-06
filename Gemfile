@@ -30,6 +30,8 @@ gem 'rubocop'
 gem 'redcarpet'
 gem 'faker'
 gem 'mapbox-rails'
+gem 'paperclip', '~> 4.3'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
