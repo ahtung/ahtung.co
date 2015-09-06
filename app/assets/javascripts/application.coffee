@@ -36,7 +36,7 @@ $ ->
         return
     return
 
-    $(nav).find('a').on 'click' ->
+    nav.find('a').on 'click', ->
       $el = $(this)
       id = $el.attr('href')
       console.log('here')
