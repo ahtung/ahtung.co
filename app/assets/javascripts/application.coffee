@@ -5,27 +5,24 @@
 #= require jquery.transit
 
 $ ->
-  $(document).ready () ->
-    $('.parallax').parallax()
+  $('.parallax').parallax()
 
-    sections = $('section')
-    nav = $('nav')
-    nav_height = nav.outerHeight()
-    $(window).on 'scroll', ->
-      cur_pos = $(this).scrollTop()
-      sections.each ->
-        top = $(this).offset().top - nav_height
-        bottom = top + $(this).outerHeight()
-        if cur_pos >= top and cur_pos <= bottom
-          nav.find('a').removeClass 'active'
-          sections.removeClass 'active'
-          $(this).addClass 'active'
-          nav.find('a[href="#' + $(this).attr('id') + '"]').addClass 'active'
-        return
-    return
+  sections = $('.section')
+  nav = $('nav')
+  nav_height = nav.outerHeight()
+  $(window).on 'scroll', ->
+    cur_pos = $(this).scrollTop()
+    sections.each ->
+      top = $(this).offset().top - nav_height
+      bottom = top + $(this).outerHeight()
+      if cur_pos >= top and cur_pos <= bottom
+        nav.find('a').removeClass 'active'
+        sections.removeClass 'active'
+        $(this).addClass 'active'
+        nav.find('a[href="#' + $(this).attr('id') + '"]').addClass 'active'
 
-    nav.find('a').on 'click', ->
-      $el = $(this)
-      id = $el.attr('href')
-      $('html, body').animate { scrollTop: $(id).offset().top - nav_height }, 500
-      false
+  nav.find('a').on 'click', ->
+    $el = $(this)
+    id = $el.attr('href')
+    $('html, body').animate { scrollTop: $(id).offset().top - nav_height }, 500
+    false
