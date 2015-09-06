@@ -12,13 +12,16 @@
  *
  *= require_tree .
  *= require_self
- *= require materialize
  */
 
-main {
-  flex: 1 0 auto;
+@import 'materialize';
+
+header {
+  nav {
+    height: 250px;
+  }
 }
 
 .parallax-container {
-  height: 100px;
+  height: 250px;
 }

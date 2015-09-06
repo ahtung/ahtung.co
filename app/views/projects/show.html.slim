@@ -1,9 +1,5 @@
-.row.half
-  .columns.small-12
-    = link_to 'x', root_path
-    = @project.title
-    = image_tag '//lorempixel.com/400/200/'
-.row.half
-  .columns.small-12
+.row
+  .col.s12
+    h2= @project.title
     - markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     = markdown.render(@project.content).html_safe
