@@ -5,6 +5,11 @@
 #= require jquery.transit
 
 $ ->
+  init()
+  $(document).on 'page:load', ->
+    init()
+
+init = () ->
   $('.parallax').parallax()
 
   sections = $('.section')
