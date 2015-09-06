@@ -13,7 +13,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'high_voltage', '~> 2.3.0'
 gem 'slim-rails', '~> 3.0.1'
-gem 'foundation-rails', '~> 5.5.2.1'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'newrelic_rpm', '~> 3.12.0.288'
 gem 'foreman', '~> 0.78.0'
@@ -46,4 +45,5 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery.transit', '~> 0.9.12'
+  gem 'rails-assets-materialize'
 end
