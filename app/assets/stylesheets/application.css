@@ -15,23 +15,12 @@
  *= require_self
  */
 
-.half {
-  height: 50%;
-}
-
-.center-vertical {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.back{
-  padding:.5em .5em;
-  background:#fff;
-}
-
 body {
-  overflow:hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
