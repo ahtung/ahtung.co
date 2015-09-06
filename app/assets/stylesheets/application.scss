@@ -15,15 +15,10 @@
  *= require materialize
  */
 
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  footer{
-    margin-top:0 !important;
-  }
-}
-
 main {
   flex: 1 0 auto;
+}
+
+.parallax-container {
+  height: 100px;
 }
