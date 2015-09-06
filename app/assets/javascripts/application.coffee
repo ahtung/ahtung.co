@@ -19,7 +19,8 @@
 $ ->
   # $(document).on 'page:fetch', ->
   #   $('body').transition y: '-100vh'
-  # $(document).on 'page:load', ->
+  $(document).on 'page:load', ->
+    $('.parallax').parallax()
   #   $('body').css y: '100vh'
   #   $('body').transition y: '-=100vh'
   $('.parallax').parallax()
