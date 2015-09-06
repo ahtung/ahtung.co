@@ -17,11 +17,11 @@
 #= require jquery.transit
 #= require_tree .
 $ ->
-  $(document).on 'page:fetch', ->
-    $('body').transition y: '-100vh'
-  $(document).on 'page:load', ->
-    $('body').css y: '100vh'
-    $('body').transition y: '-=100vh'
+  # $(document).on 'page:fetch', ->
+  #   $('body').transition y: '-100vh'
+  # $(document).on 'page:load', ->
+  #   $('body').css y: '100vh'
+  #   $('body').transition y: '-=100vh'
 
   $(document).ready ->
     $('.parallax').parallax()
