@@ -3,7 +3,7 @@
     h2.header= @project.title
 .parallax-container
   .parallax
-    = image_tag @project.image.url, width: "100%"
+    = image_tag @project.image.url(:original), width: "100%"
 .section.white
   .row.container
     h2.header Details
