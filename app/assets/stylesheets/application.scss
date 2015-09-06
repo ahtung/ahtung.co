@@ -10,29 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
- *= require foundation_and_overrides
-
+ *= require 'materialize'
  */
-
-.half {
-  height: 50%;
-}
-
-.center-vertical {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.back{
-  padding:.5em .5em;
-  background:#fff;
-}
-
-body {
-  overflow:hidden;
-}
