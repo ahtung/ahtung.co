@@ -28,6 +28,7 @@ gem 'unicorn', '~> 4.9.0'
 gem 'roboto', '~> 0.2.0'
 gem 'rubocop'
 gem 'redcarpet'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug'
