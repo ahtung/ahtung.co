@@ -11,6 +11,7 @@ class Project < ActiveRecord::Base
     edit do
       field :title, :string
       field :content, :text
+      field :image, :paperclip
     end
   end
 end
