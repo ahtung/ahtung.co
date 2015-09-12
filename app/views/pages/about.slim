@@ -3,21 +3,33 @@
 - keywords 'ahtung, about'
 .parallax-container
   .parallax
-    = image_tag "https://images.unsplash.com/photo-1437941792454-bacef7a7f736?q=80&fm=jpg&s=9d54a5c69d3ae8ba1af0554649c24aa8", width: "100%"
+    = image_tag asset_path('about_top'), width: "100%"
 .section#who
   .row.container
     h2.center.header About
     h3.header Who we are
-    p.grey-text.text-darken-3.lighten-3 A & B
+    .grey-text.text-darken-3.lighten-3
+      p Anno 2015, Ahtung is an adventerous web bureau which is specialized in small-scale web services.
+      br
+      p
+        | @ Ahtung, we have build web-sites, APIs, mobile applications and web-services.
+      p 
+        | As much as we love to stand on the shoulders of giants we also love to contribute
+        | Check us on [Github](https://github.com/ahtung)
+    
 .section#what
   .row.container
     h3.header What we do
-    p.grey-text.text-darken-3.lighten-3 A
-    p.grey-text.text-darken-3.lighten-3 B
+    ul
+      li Web-services
+      li iOS applications
+      li RubyOnRails applications
+      li API's
 .section.white#contact
   .row.container
     h3.header Why we do what we do
-    p.grey-text.text-darken-3.lighten-3 A
+    p.grey-text.text-darken-3.lighten-3
+      | We would die for a simpler future and we happen to be developers.
 .parallax-container
   .parallax
-    = image_tag "https://images.unsplash.com/photo-1428948304740-392e214d312f?q=80&fm=jpg&s=f5bf04e4900be46a52288bff07453250", width: '100%'
+    = image_tag asset_path('about_bottom'), width: '100%'
