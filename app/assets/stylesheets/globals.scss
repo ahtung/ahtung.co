@@ -24,3 +24,11 @@ $yellow: #F8D134;
 @mixin xlarge_text {
  font-size: 3.4em;
 }
+
+.yellow-background {
+  background-color: $yellow;
+}
+
+.yellow-text {
+  color: $yellow;
+}

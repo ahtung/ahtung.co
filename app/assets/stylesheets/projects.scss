@@ -1,5 +1,6 @@
 @import "globals";
 
+// Index
 .project {
   a {
     color: $black;
@@ -15,4 +16,10 @@
       @include medium_text;
     }
   }
+}
+
+// Show
+.header{
+  @include caviar;
+  color: $yellow;
 }
