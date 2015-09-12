@@ -6,7 +6,13 @@
 
 $ ->
   init()
+  $('.progress').hide();
+  $(document).on 'page:fetch', (event) ->
+    $('.progress').fadeIn('fast');
+    $('main').fadeOut('fast');
+
   $(document).on 'page:load', ->
+    $('.progress').fadeOut('fast')
     init()
 
 init = () ->
