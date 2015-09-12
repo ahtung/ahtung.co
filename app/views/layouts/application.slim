@@ -10,7 +10,9 @@ html lang="en"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    = render "header"
-    = render "menu"
-    == yield
+    header
+      = render "header"
+      = render "menu"
+    main
+      == yield
     = render "footer"
