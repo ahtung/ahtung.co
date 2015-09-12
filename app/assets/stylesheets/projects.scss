@@ -1,0 +1,8 @@
+@import "globals";
+
+.project {
+  a {
+    color: $black;
+    @include caviar;
+  }
+}

@@ -1,9 +1,9 @@
 .row.container
   ul
     - @projects.each do |project|
-      li
-        = link_to project do
+      li.project
+        = link_to project, class: "black-text" do
           = image_tag project.image.url(:thumb)
-          = project.title
-          = project.subtitle
+          span.title= project.title
+          span.subtitle= project.subtitle
         
