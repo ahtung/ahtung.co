@@ -3,7 +3,7 @@
 #= require materialize
 #= require turbolinks
 #= require jquery.transit
-
+#= require contact
 $ ->
   init()
   $('.progress').hide();
