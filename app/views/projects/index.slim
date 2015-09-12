@@ -5,7 +5,8 @@
         = link_to project, class: "black-text" do
         
           .col.s4.center
-            .color style="background-color:#{project.color}"
+            .valign-wrapper.color style="background-color:#{project.color}"
+              i.valign.material-icons.white-text warning
           .col.s8
             .row
               span.title= project.title
