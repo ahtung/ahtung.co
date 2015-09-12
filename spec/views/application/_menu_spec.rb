@@ -6,7 +6,7 @@ RSpec.describe 'application/_menu.slim', type: :view do
   end
 
   it 'should have link to work' do
-    rendered.should have_link('Work', href: projects_path)
+    rendered.should have_link('Work', href: root_path)
   end
   it 'should have link to about' do
     rendered.should have_link('About', href: page_path('about'))
