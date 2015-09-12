@@ -31,6 +31,7 @@ class @Contact
       scrollwheel: false
       zoom: 10
       disableDefaultUI: true
+      draggable: false
       mapTypeControlOptions:
         mapTypeIds: []
       )
