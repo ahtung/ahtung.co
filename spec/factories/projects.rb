@@ -4,5 +4,6 @@ FactoryGirl.define do
     subtitle { Faker::Lorem.sentence }
     content { Faker::Lorem.paragraph(3) }
     image { Faker::Avatar.image }
+    color { "#%06x" % (rand * 0xffffff) }
   end
 end
