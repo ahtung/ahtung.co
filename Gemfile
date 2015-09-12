@@ -33,6 +33,7 @@ gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '< 2.0'
 gem 'nav_lynx'
 gem 'meta-tags'
+gem 'factory_girl_rails'
 
 group :development, :test do
   gem 'byebug'
@@ -40,7 +41,6 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
-  gem 'factory_girl_rails'
   gem 'brakeman'
 end
 
