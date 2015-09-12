@@ -4,5 +4,11 @@
   a {
     color: $black;
     @include caviar;
+    .title {
+      @include large_text;
+    }
+    .subtitle {
+      @include medium_text;
+    }
   }
 }
