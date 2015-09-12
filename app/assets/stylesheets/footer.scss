@@ -1,5 +1,6 @@
 @import 'globals';
 
 footer{
-  @include caviar
+  @include caviar;
+  @include medium_text;
 }

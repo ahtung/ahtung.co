@@ -4,8 +4,11 @@
   @include lane
 }
 
-nav{
-  i {
-    color: $yellow;
+header{
+  nav{
+    @include xlarge_text;
+    i {
+      color: $yellow;
+    }
   }
 }
