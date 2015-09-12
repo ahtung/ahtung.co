@@ -34,6 +34,7 @@ gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '< 2.0'
 gem 'nav_lynx'
 gem 'meta-tags'
+gem 'googlestaticmap'
 
 group :development, :test do
   gem 'byebug'
