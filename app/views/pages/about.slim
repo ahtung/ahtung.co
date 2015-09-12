@@ -9,12 +9,13 @@
     h2.center.header About
     h3.header Who we are
     .grey-text.text-darken-3.lighten-3
-      p Anno 2015, Ahtung is an adventerous web bureau which is specialized in small-scale web services.
-      br
       p
-        | @ Ahtung, we have build web-sites, APIs, mobile applications and web-services.
+        | Anno 2015, Ahtung is an adventerous web bureau which is specialized in small-scale web services.
+      p
+        | At Ahtung, we have build web-sites, APIs, mobile applications and web-services.
       p 
-        | As much as we love to stand on the shoulders of giants we also love to contribute
+        | As much as we love to stand on the shoulders of giants we also love to contribute.
+      p         
         | Check us on [Github](https://github.com/ahtung)
     
 .section#what
@@ -25,11 +26,16 @@
       li iOS applications
       li RubyOnRails applications
       li API's
-.section.white#contact
+.section.white#why
   .row.container
     h3.header Why we do what we do
     p.grey-text.text-darken-3.lighten-3
       | We would die for a simpler future and we happen to be developers.
+.section.white#contact
+  .row.container
+    h3.header Hire us
+    p.grey-text.text-darken-3.lighten-3
+      = link_to 'contact', page_path('contact'), class: 'waves-effect waves-light btn'
 .parallax-container
   .parallax
     = image_tag asset_path('about_bottom'), width: '100%'
