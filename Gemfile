@@ -17,7 +17,6 @@ gem 'rails_12factor', '~> 0.0.3'
 gem 'newrelic_rpm', '~> 3.12.0.288'
 gem 'foreman', '~> 0.78.0'
 gem 'rack-google-analytics', '~> 1.2.0'
-gem 'librato-rails', '~> 0.11.1'
 gem 'rails_admin', '~> 0.6.7'
 gem 'devise', '~> 3.4.1'
 gem 'turbolinks', '~> 2.5.3'
@@ -34,6 +33,7 @@ gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '< 2.0'
 gem 'nav_lynx'
 gem 'meta-tags'
+gem 'factory_girl_rails'
 
 group :development, :test do
   gem 'byebug'
@@ -41,7 +41,6 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
-  gem 'factory_girl_rails'
   gem 'brakeman'
 end
 
