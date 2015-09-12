@@ -3,7 +3,9 @@
 - keywords 'ahtung, contact, email, contact form'
 .parallax-container
   .parallax
-    = image_tag "https://images.unsplash.com/photo-1437941792454-bacef7a7f736?q=80&fm=jpg&s=9d54a5c69d3ae8ba1af0554649c24aa8", width: "100%"
+    - map = GoogleStaticMap.new(width: 2000, zoom: 13, center: MapLocation.new(address: 'Maslak, Istanbul'))
+    - image_url = map.url(:auto)
+    = image_tag image_url, width: "100%"
 .section.white#contact
   .row.container
     h2.center.header Contact
