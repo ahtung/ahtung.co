@@ -28,6 +28,11 @@ class @Contact
         lng: 29.019673
       scrollwheel: false
       zoom: 10
+      panControl: false
+      zoomControl: false
+      scaleControl: false
+      streetViewControl: false
+      overviewMapControl: false
       mapTypeControlOptions:
         mapTypeIds: []
       )
