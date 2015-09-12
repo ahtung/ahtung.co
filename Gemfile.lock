@@ -247,6 +247,8 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mapbox-rails (1.6.1.1)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (2.6.1)
     mimemagic (0.3.0)
     mini_portile (0.6.2)
@@ -452,6 +454,7 @@ DEPENDENCIES
   jquery-rails (~> 4.0.4)
   librato-rails (~> 0.11.1)
   mapbox-rails
+  meta-tags
   nav_lynx
   newrelic_rpm (~> 3.12.0.288)
   paperclip (~> 4.3)
