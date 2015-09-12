@@ -1,3 +1,8 @@
+@import 'globals';
+
+.brand-logo{
+  @include lane
+}
 nav{
   height:80px;
 }
