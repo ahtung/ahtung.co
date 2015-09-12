@@ -1,0 +1,20 @@
+.parallax-container
+  .parallax
+    = image_tag "https://images.unsplash.com/photo-1428948304740-392e214d312f?q=80&fm=jpg&s=f5bf04e4900be46a52288bff07453250", width: '100%'
+.section#works.white
+  .row.container
+    h2.header Works
+    .row
+      - @projects.each do |project|
+        .col.s12.m6.l3
+          .card
+            .card-image
+              = image_tag project.image.url(:thumb)
+              span.card-title= project.title
+            .card-content
+              = "Sonra"
+            .card-action
+              = link_to project.title, project
+.parallax-container
+  .parallax
+    = image_tag "https://images.unsplash.com/photo-1434543177303-ef2cc7707e0d?q=80&fm=jpg&s=e72664d5d9af677480d0f7337d0a74d2", width: '100%'

@@ -1,3 +1,7 @@
-nav{
-  height:80px;
+@import 'globals';
+
+nav {
+  i {
+    color: $yellow;
+  }
 }
