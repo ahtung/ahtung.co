@@ -15,6 +15,9 @@ $ ->
     init()
     map = new Contact
 
+  $(window).on 'resize', ->
+    new Contact
+
   $('.progress').fadeOut('fast')
   init()
 
