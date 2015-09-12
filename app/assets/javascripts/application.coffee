@@ -12,12 +12,15 @@ $ ->
 
   $(document).on 'page:load', ->
     $('.progress').fadeOut('fast')
-    # initMap()
+    init()
+    map = new Contact
+
   $('.progress').fadeOut('fast')
+  init()
 
 
-# init = () ->
-#   $('.parallax').parallax()
+init = () ->
+  $('.parallax').parallax()
 #
 #   sections = $('.section')
 #   nav = $('nav')
