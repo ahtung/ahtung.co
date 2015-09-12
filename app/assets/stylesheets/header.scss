@@ -1,6 +1,10 @@
 @import 'globals';
 
-nav {
+.brand-logo{
+  @include lane
+}
+
+nav{
   i {
     color: $yellow;
   }
