@@ -1,14 +1,13 @@
 @import 'globals';
 
-.brand-logo{
-  @include lane
-}
-
 header{
   nav{
-    @include xlarge_text;
-    i {
-      color: $yellow;
+    .brand-logo{
+      @include lane;
+      @include xlarge_text;
+      i {
+        color: $yellow;
+      }
     }
   }
 }
