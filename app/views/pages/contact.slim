@@ -3,7 +3,7 @@
 - keywords 'ahtung, contact, email, contact form'
 .parallax-container
   .parallax
-    - map = GoogleStaticMap.new(api_key: ENV['API_KEY'], scale: 2, width: '2000', zoom: 13, center: MapLocation.new(address: 'Maslak, Istanbul'))
+    - map = GoogleStaticMap.new(api_key: ENV['API_KEY'], scale: 2, width: '2000', zoom: 9, center: MapLocation.new(address: 'Maslak, Istanbul'))
     - image_url = map.url(:auto)
     = image_tag image_url, width: "100%"
 .section.white#contact
