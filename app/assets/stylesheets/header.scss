@@ -2,9 +2,17 @@
 
 header{
   nav{
+    height:80px;
+    line-height:80px;
     .brand-logo{
       @include lane;
       @include xlarge_text;
+      i{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        height: 64px;
+        width:64px;
+      }
     }
   }
 }
