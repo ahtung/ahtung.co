@@ -1,9 +1,7 @@
 .navbar-fixed
-  nav.blue.lighten-2
-    .container
-      .nav-wrapper
-        = link_to "Ahtung.co", root_path, class: "brand-logo"
-        ul#nav-mobile.right.hide-on-med-and-down
-          li = link_to 'About', '#about'
-          li = link_to 'Contact', '#contact'
-          li = link_to 'Works', '#works'
+  nav.white
+    .nav-wrapper
+      .valign-wrapper
+        = link_to root_path, class: "brand-logo center black-text valign" do
+          i.left.material-icons.large.yellow-background.black-text warning
+          | Ahtung

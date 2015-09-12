@@ -1,0 +1,16 @@
+@import 'globals';
+
+.menu {
+  li {
+    @include medium_text;
+    @include caviar;
+    font-size: 1.4rem;
+    display: inline;
+    a {
+      color: $black;
+      &.selected {
+        color: $yellow;
+      }
+    }
+  }
+}

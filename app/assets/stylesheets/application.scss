@@ -10,6 +10,23 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require fonts
+ *= require globals
+ *= require materialize
+ *= require header
+ *= require menu
+ *= require projects
+ *= require footer
+ *= require_tree ./pages
  *= require_self
- *= require 'materialize'
  */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

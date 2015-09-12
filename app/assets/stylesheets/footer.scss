@@ -1,0 +1,6 @@
+@import 'globals';
+
+footer{
+  @include caviar;
+  @include small_text;
+}

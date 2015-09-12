@@ -1,12 +1,11 @@
 .section.white
   .row.container
-    h2.header= @project.title
+    h2.center.header= @project.title
 .parallax-container
   .parallax
     = image_tag @project.image.url(:original), width: "100%"
 .section.white
   .row.container
-    h2.header Details
     p
       - markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
       = markdown.render(@project.content).html_safe

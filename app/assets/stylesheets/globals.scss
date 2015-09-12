@@ -1,0 +1,34 @@
+$black: #000;
+$yellow: #F8D134;
+
+@mixin lane {
+  font-family: 'Lane Upper';
+}
+
+@mixin caviar {
+  font-family: 'Caviar Dreams';
+}
+
+@mixin small_text {
+  font-size: 1.2em;
+}
+
+@mixin medium_text {
+  font-size: 1.4em;
+}
+
+@mixin large_text {
+  font-size: 2.4em;
+}
+
+@mixin xlarge_text {
+ font-size: 3.4em;
+}
+
+.yellow-background {
+  background-color: $yellow;
+}
+
+.yellow-text {
+  color: $yellow;
+}

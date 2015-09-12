@@ -1,0 +1,10 @@
+@import 'globals';
+
+header{
+  nav{
+    .brand-logo{
+      @include lane;
+      @include xlarge_text;
+    }
+  }
+}
