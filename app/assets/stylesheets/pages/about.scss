@@ -1,5 +1,6 @@
 @import 'globals';
 
-main{
+.section{
   @include caviar;
+  @include medium_text;
 }
