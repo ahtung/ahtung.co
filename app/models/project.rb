@@ -12,6 +12,8 @@ class Project < ActiveRecord::Base
       field :title, :string
       field :content, :text
       field :image, :paperclip
+      field :color
+      field :icon
     end
   end
 end
