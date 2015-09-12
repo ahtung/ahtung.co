@@ -32,6 +32,3 @@ initMap = ->
   map.mapTypes.set(customMapTypeId, customMapType)
   map.setMapTypeId(customMapTypeId)
   return
-
-$(document).ready ->
-  initMap()
