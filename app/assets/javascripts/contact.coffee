@@ -30,6 +30,7 @@ class @Contact
         lng: 29.019673
       scrollwheel: false
       zoom: 10
+      disableDefaultUI: true
       mapTypeControlOptions:
         mapTypeIds: []
       )
