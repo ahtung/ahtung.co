@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "application/_footer.slim", type: :view, focus: true do
+RSpec.describe "application/_footer.slim", type: :view do
   before :each do
     render
   end
