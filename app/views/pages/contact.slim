@@ -6,9 +6,10 @@
     - map = GoogleStaticMap.new(width: 2000, zoom: 13, center: MapLocation.new(address: 'Maslak, Istanbul'))
     - image_url = map.url(:auto)
     = image_tag image_url, width: "100%"
-.section.white#contact
+.center.section.white#contact
   .row.container
     h2.center.header Contact
-    p.grey-text.text-darken-3.lighten-3= mail_to "info@opotto.com", "email", class: 'btn waves-light waves-effect amber lighten-1'
+    h3.center.header via
+    p.grey-text.text-darken-3.lighten-3= mail_to "info@opotto.com", "email", class: 'btn waves-light waves-effect amber lighten-1helper'
     p.grey-text.text-darken-3.lighten-3= phone_number_link('90 312 284 31 48')
     p.grey-text.text-darken-3.lighten-3= facebook_link('pages/Ahtung/1640658482879986')
