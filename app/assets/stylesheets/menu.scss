@@ -1,8 +1,8 @@
 @import 'globals';
 
 .menu {
-  @include medium_text;
   li {
+    @include medium_text;
     @include caviar;
     font-size: 1.4rem;
     display: inline;
