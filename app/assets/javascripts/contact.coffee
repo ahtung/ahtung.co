@@ -1,5 +1,7 @@
 class @Contact
   constructor: ->
+    if $('#map').length == 0
+      return
     customMapType = new google.maps.StyledMapType(
       [{
         stylers: [
