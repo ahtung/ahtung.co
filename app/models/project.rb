@@ -10,6 +10,7 @@ class Project < ActiveRecord::Base
   rails_admin do
     edit do
       field :title, :string
+      field :subtitle, :string
       field :content, :text
       field :image, :paperclip
       field :color
