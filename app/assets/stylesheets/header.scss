@@ -3,6 +3,9 @@
 .brand-logo{
   @include lane
 }
+
 nav{
-  height:80px;
+  i {
+    color: $yellow;
+  }
 }

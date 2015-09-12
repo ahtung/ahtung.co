@@ -253,6 +253,8 @@ GEM
     minitest (5.7.0)
     multi_json (1.11.0)
     multipart-post (2.0.0)
+    nav_lynx (1.1.1)
+      rails (>= 3.1.0)
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -450,6 +452,7 @@ DEPENDENCIES
   jquery-rails (~> 4.0.4)
   librato-rails (~> 0.11.1)
   mapbox-rails
+  nav_lynx
   newrelic_rpm (~> 3.12.0.288)
   paperclip (~> 4.3)
   pg (~> 0.18.1)

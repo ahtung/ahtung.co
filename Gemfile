@@ -32,6 +32,7 @@ gem 'faker'
 gem 'mapbox-rails'
 gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '< 2.0'
+gem 'nav_lynx'
 
 group :development, :test do
   gem 'byebug'

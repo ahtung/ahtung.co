@@ -1,5 +1,15 @@
+@import 'globals';
+
 .menu {
   li {
+    @include caviar;
+    font-size: 1.4rem;
     display: inline;
+    a {
+      color: $black;
+      &.selected {
+        color: $yellow;
+      }
+    }
   }
 }
