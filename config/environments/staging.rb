@@ -81,7 +81,10 @@ Rails.application.configure do
   config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
   # S3
-  config.action_controller.asset_host = "//s3.#{ENV['FOG_REGION']}.amazonaws.com/#{ENV['FOG_DIRECTORY']}"
+  config.action_controller.asset_host = Proc.new do |source, request|
+    scheme = request.ssl? ? "https" : "http"
+    "#{scheme}://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  end
   config.assets.prefix = '/assets'
 
   # Rails admin
