@@ -1,7 +1,15 @@
-.row.half style="background:url(http://lorempixel.com/400/200/);background-size:cover;"
-  .columns.small-12
-    = link_to 'x', root_path, class: 'back'
-.row.half
-  .columns.small-12
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut finibus leo. Cras nec tortor at turpis pretium dapibus fermentum vitae ex. Duis gravida ac lorem sit amet molestie. Nam ut mauris eu sapien placerat semper in et felis. Aliquam faucibus lorem feugiat mattis facilisis. Phasellus elementum congue interdum. Aenean auctor metus turpis, id cursus lectus pellentesque quis. Pellentesque eu fringilla lorem. In volutpat tempus tortor vitae sollicitudin. In sed aliquam turpis, sed auctor velit. Nunc ullamcorper placerat tincidunt. Donec metus purus, hendrerit vitae mi vel, volutpat ultrices lectus. Etiam ultricies mauris ac libero aliquam, a vestibulum sapien imperdiet. Vivamus sodales ultricies dui. Aenean porttitor mauris sit amet magna interdum sagittis.
+- title 'Contact'
+- description 'Information for contacting to Ahtung'
+- keywords 'ahtung, contact, email, contact form'
+.section.white#contact
+  .row.container
+    #map.pencil
+    p.grey-text.text-darken-3.lighten-3 Mauris et finibus metus. Cras id dolor ac nunc condimentum eleifend. Sed facilisis consequat ligula, nec egestas libero rhoncus et. Nam lacinia, nibh eu faucibus viverra, purus ex viverra justo, scelerisque feugiat eros leo sit amet velit. Proin in faucibus justo. Aenean eu libero enim. Cras rutrum mauris sit amet lectus bibendum, ac vehicula tortor blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non dolor vel massa cursus sagittis.
+.parallax-container
+  .parallax
+    = image_tag "https://images.unsplash.com/photo-1437941792454-bacef7a7f736?q=80&fm=jpg&s=9d54a5c69d3ae8ba1af0554649c24aa8", width: "100%"
+.section.white#contact
+  .row.container
+    p.grey-text.text-darken-3.lighten-3= mail_to "info@opotto.com", "email"
+    p.grey-text.text-darken-3.lighten-3= phone_number_link('90 312 284 31 48')
+    p.grey-text.text-darken-3.lighten-3= facebook_link('pages/Ahtung/1640658482879986')

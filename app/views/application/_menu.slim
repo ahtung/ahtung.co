@@ -1,4 +1,4 @@
-= link_to 'About', page_path(:about)
-= link_to 'Contact', page_path(:contact)
-= link_to 'Stats', page_path(:stats)
-= link_to 'Works', projects_path
+ul.menu.center
+  li= nav_link_to "Work", root_path
+  li= nav_link_to "About", page_path("about")
+  li= nav_link_to "Contact", page_path("contact")

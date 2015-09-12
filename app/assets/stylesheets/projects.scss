@@ -1,3 +1,25 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "globals";
+
+// Index
+.project {
+  a {
+    color: $black;
+    @include caviar;
+    .color{
+      width: 100%;
+      height: 100%;
+    }
+    .title{
+      @include large_text;
+    }
+    .subtitle{
+      @include medium_text;
+    }
+  }
+}
+
+// Show
+.header{
+  @include caviar;
+  color: $yellow;
+}

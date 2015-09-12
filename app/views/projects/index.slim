@@ -1,0 +1,15 @@
+.container
+  ul.row
+    - @projects.each do |project|
+      li.col.s12.m12.l6.project
+        = link_to project, class: "black-text row" do
+        
+          .col.s4.m2
+            .valign-wrapper.color style="background-color:#{project.color}"
+              i.valign.material-icons.white-text.medium= project.icon
+          .col.s8
+            .row
+              span.title= project.title
+            .row
+              span.subtitle= project.subtitle
+        

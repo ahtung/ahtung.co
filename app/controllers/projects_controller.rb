@@ -5,11 +5,17 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @page_title = 'Works'
+    @page_description = 'Find out more about our projects. '
+    @page_keywords = 'ahtung, internet, list, projects'
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @page_title = "#{@project.title}"
+    @page_description = @project.subtitle
+    @page_keywords = "ahtung project, #{@project.title}, internet"
   end
 
   private
