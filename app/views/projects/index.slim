@@ -9,7 +9,7 @@
               i.material-icons.white-text.medium= project.icon
           .col.s8
             .row
-              span.title= project.title
+              span.title= truncate(project.title, length: 12)
             .row
               span.subtitle= project.subtitle
         
