@@ -32,6 +32,11 @@ class @Contact
       zoom: 10
       disableDefaultUI: true
       draggable: false
+      panControl: false
+      zoomControl: false
+      scaleControl: false
+      streetViewControl: false
+      overviewMapControl: false
       mapTypeControlOptions:
         mapTypeIds: []
       )
