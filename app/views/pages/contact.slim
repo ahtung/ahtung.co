@@ -1,14 +1,11 @@
 - title 'Contact'
 - description 'Information for contacting to Ahtung'
 - keywords 'ahtung, contact, email, contact form'
-.parallax-container
-  .parallax
-    - map = GoogleStaticMap.new(api_key: ENV['API_KEY'], scale: 2, width: '2000', zoom: 9, center: MapLocation.new(address: 'Maslak, Istanbul'))
-    - image_url = map.url(:auto)
-    = image_tag image_url, width: "100%"
+#map
 .section.white#contact
   .row.container
     h2.center.header Contact
     p.grey-text.text-darken-3.lighten-3= mail_to "info@opotto.com", "email", class: 'btn waves-light waves-effect amber lighten-1'
     p.grey-text.text-darken-3.lighten-3= phone_number_link('90 312 284 31 48')
     p.grey-text.text-darken-3.lighten-3= facebook_link('pages/Ahtung/1640658482879986')
+javascript:
