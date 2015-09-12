@@ -1,25 +1,42 @@
 - title 'About'
 - description 'Short brief & history about Ahtung Co'
 - keywords 'ahtung, about'
-.section#who
-  .row.container
-    p.grey-text.text-darken-3.lighten-3 Mauris et finibus metus. Cras id dolor ac nunc condimentum eleifend. Sed facilisis consequat ligula, nec egestas libero rhoncus et. Nam lacinia, nibh eu faucibus viverra, purus ex viverra justo, scelerisque feugiat eros leo sit amet velit. Proin in faucibus justo. Aenean eu libero enim. Cras rutrum mauris sit amet lectus bibendum, ac vehicula tortor blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non dolor vel massa cursus sagittis.
 .parallax-container
   .parallax
-    = image_tag "https://images.unsplash.com/photo-1437941792454-bacef7a7f736?q=80&fm=jpg&s=9d54a5c69d3ae8ba1af0554649c24aa8", width: "100%"
+    = image_tag asset_path('about_top'), width: "100%"
 .section#who
   .row.container
-    h2.header Who we are
-    p.grey-text.text-darken-3.lighten-3 A & B
+    h2.center.header About
+    h3.header Who we are
+    .grey-text.text-darken-3.lighten-3
+      p
+        | Anno 2015, Ahtung is an adventerous web bureau which is specialized in small-scale web services.
+      p
+        | At Ahtung, we have build web-sites, APIs, mobile applications and web-services.
+      p 
+        | As much as we love to stand on the shoulders of giants we also love to contribute.
+      p         
+        | Check us on
+        = link_to 'Github', 'https://github.com/ahtung', class: 'waves-effect waves-light btn amber lighten-1'
+    
 .section#what
   .row.container
-    h2.header What we do
-    p.grey-text.text-darken-3.lighten-3 A
-    p.grey-text.text-darken-3.lighten-3 B
+    h3.header What we do
+    ul
+      li Web-services
+      li iOS applications
+      li RubyOnRails applications
+      li API's
+.section.white#why
+  .row.container
+    h3.header Why we do what we do
+    p.grey-text.text-darken-3.lighten-3
+      | We would die for a simpler future and we happen to be developers.
 .section.white#contact
   .row.container
-    h2.header Why we do what we do
-    p.grey-text.text-darken-3.lighten-3 A
+    h3.header Hire us
+    p.grey-text.text-darken-3.lighten-3
+      = link_to 'contact', page_path('contact'), class: 'waves-effect waves-light btn amber lighten-1'
 .parallax-container
   .parallax
-    = image_tag "https://images.unsplash.com/photo-1428948304740-392e214d312f?q=80&fm=jpg&s=f5bf04e4900be46a52288bff07453250", width: '100%'
+    = image_tag asset_path('about_bottom'), width: '100%'
