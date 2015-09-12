@@ -5,11 +5,11 @@
         = link_to project, class: "black-text row" do
         
           .col.s4
-            .valign-wrapper.color style="background-color:#{project.color}"
+            .color style="background-color:#{project.color}"
               i.material-icons.white-text.medium= project.icon
           .col.s8
             .row
               span.title= truncate(project.title, length: 12)
             .row
-              span.subtitle= project.subtitle
+              span.subtitle= truncate(project.subtitle, length: 40)
         
