@@ -7,18 +7,18 @@
 
 $ ->
   $(document).on 'page:fetch', (event) ->
-    $('.progress').fadeIn('fast');
+    $('.progress').animate({opacity: 1.0})
     $('main').fadeOut('fast');
 
   $(document).on 'page:load', ->
-    $('.progress').fadeOut('fast')
+    $('.progress').animate({opacity: 0.0})
     init()
     map = new Contact
 
   $(window).on 'resize', ->
     new Contact
 
-  $('.progress').fadeOut('fast')
+  $('.progress').animate({opacity: 0.0})
   init()
 
 
