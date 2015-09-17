@@ -6,6 +6,7 @@ header{
     nav{
       height:80px;
       line-height:80px;
+      box-shadow: none !important;
       .brand-logo{
         @include lane;
         @include xlarge_text;
@@ -18,5 +19,8 @@ header{
         }
       }
     }
+  }
+  .progress{
+    margin:0;
   }
 }
