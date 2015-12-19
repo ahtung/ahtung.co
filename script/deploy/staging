@@ -5,6 +5,7 @@ set -e
 export RAILS_ENV='staging'
 export RACK_ENV='staging'
 
+[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow
 git push git@heroku.com:ahtung-staging.git develop:master
 heroku run rake db:migrate --app ahtung-staging
 heroku run rake db:seed --app ahtung-staging
