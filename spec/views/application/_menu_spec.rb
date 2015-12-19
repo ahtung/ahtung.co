@@ -5,8 +5,11 @@ RSpec.describe 'application/_navigation.slim', type: :view do
     render
   end
 
+  xit 'should have link to top' do
+    rendered.should have_link(href: '#top')
+  end
   it 'should have link to work' do
-    rendered.should have_link('Work', href: '#top')
+    rendered.should have_link('Work', href: '#work')
   end
   it 'should have link to about' do
     rendered.should have_link('About', href: '#about')
