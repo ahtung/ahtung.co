@@ -14,7 +14,7 @@ $ ->
 
   init()
 
-  $('.nav-links a').on 'click', (event) ->
+  $('.brand-logo, .nav-links a').on 'click', (event) ->
     link = $(this).attr("href")
     $(window).scrollTo(link, 300, offset: -80)
     event.preventDefault()
