@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def github_link(page_path)
-    link_to 'https://github.com/ahtung', class: 'white-text', target: '_blank' do
+    link_to "https://github.com/#{page_path}", class: 'white-text', target: '_blank' do
       content_tag :i, '', class: 'icon-github-circled'
     end
   end
