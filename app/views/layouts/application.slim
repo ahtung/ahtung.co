@@ -5,11 +5,8 @@ html lang="en"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
     = display_meta_tags site: 'Ahtung'
     title= content_for?(:title) ? yield(:title) : "Ahtung"
-    = stylesheet_link_tag "application", "data-turbolinks-track" => true
-    = stylesheet_link_tag    "https://fonts.googleapis.com/icon?family=Material+Icons"
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = javascript_include_tag "http://maps.google.com/maps/api/js??key=#{ENV['GOOGLE_MAPS_API_KEY']}"
+    = stylesheet_link_tag "application", "https://fonts.googleapis.com/icon?family=Material+Icons"
+    = javascript_include_tag "application", "http://maps.google.com/maps/api/js??key=#{ENV['GOOGLE_MAPS_API_KEY']}"
     = csrf_meta_tags
   body
     header
