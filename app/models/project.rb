@@ -8,6 +8,7 @@ class Project < ActiveRecord::Base
     edit do
       field :title, :string
       field :subtitle, :string
+      field :url, :string
     end
   end
 end
