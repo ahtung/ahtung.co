@@ -1,6 +1,6 @@
 test:
   override:
-    - bundle exec rake spec
+    - bundle exec rake spec --format RspecJunitFormatter
     - bundle exec rake style
     - bundle exec rake security
     # - bundle exec rake quality
