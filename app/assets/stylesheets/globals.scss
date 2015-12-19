@@ -1,9 +1,9 @@
 $black: #000;
 $yellow: #F8D134;
-
-@mixin lane {
-  font-family: 'Lane Upper';
-}
+$blue: #1c71f6;
+$grey: #58595B;
+$light-grey: #a6a8ab;
+$whitish: #f7f7f7;
 
 @mixin caviar {
   font-family: 'Caviar Dreams';
@@ -31,4 +31,40 @@ $yellow: #F8D134;
 
 .yellow-text {
   color: $yellow;
+}
+
+.blue-background {
+  background-color: $blue;
+}
+
+.blue-text {
+  color: $blue;
+}
+
+.grey-background {
+  background-color: $grey;
+}
+
+.grey-text {
+  color: $grey;
+}
+
+.light-grey-background {
+  background-color: $light-grey;
+}
+
+.light-grey-text {
+  color: $light-grey;
+}
+
+.whitish-text{
+  color: $whitish;
+}
+
+.whitish-background{
+  background-color: $whitish;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

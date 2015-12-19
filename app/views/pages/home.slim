@@ -1,0 +1,12 @@
+= render 'hero'
+=render 'qualities'
+#work.container
+  .row.center-align
+    .col.s12
+      h3.blue-text.uppercase= t('projects.our')
+      p.grey-text= t('projects.how')
+  .row
+    = render partial: 'projects/project', collection: @projects
+    - if @placeholders
+      - @placeholders.times do
+        = render partial: 'projects/placeholder'
