@@ -24,7 +24,7 @@ $ ->
 
   $('.nav-links a').on 'click', (event) ->
     link = $(this).attr("href")
-    $(window).scrollTo('#work', 300)
+    $(window).scrollTo(link, 300, offset: -80)
     event.preventDefault()
 
 
