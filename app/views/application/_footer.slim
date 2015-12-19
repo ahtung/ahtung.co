@@ -1,4 +1,6 @@
-footer.page-footer.white.light
-  .footer-copyright.white
-    .container.center.black-text.text-darken-2
-      = " © #{Time.now.strftime('%Y')} All rights reserved."
+footer.page-footer.blue.white-text.center-align
+  h3= t('footer.title')
+  = render 'social_links'
+  .footer-copyright
+    .container.center
+      = " © 2015 Ahtung - All rights reserved - Design by Madco"
