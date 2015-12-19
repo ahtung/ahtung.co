@@ -9,6 +9,10 @@ module ApplicationHelper
   end
 
   def facebook_link(page_path)
-    link_to '', "https://www.facebook.com/#{page_path}", class: 'facebook_link', target: '_blank'
+    link_to 'f', "https://www.facebook.com/#{page_path}", class: 'white-text', target: '_blank'
+  end
+
+  def twitter_link(page_path)
+    link_to 't', "https://twitter.com/#{page_path}", class: 'white-text', target: '_blank'
   end
 end
