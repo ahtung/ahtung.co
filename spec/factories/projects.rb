@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :project do
-    title { Faker::Book.title }
+    title { Faker::Lorem.word }
     subtitle { Faker::Lorem.sentence }
     content { Faker::Lorem.paragraph(3) }
     image { Faker::Avatar.image }
