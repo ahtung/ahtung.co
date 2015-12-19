@@ -5,5 +5,3 @@ ul.right
   li= nav_link_to "Work", root_path, { class: 'blue-text' }, { controller_segment: 1 }
   li= nav_link_to "About", page_path("about"), class: 'blue-text'
   li= nav_link_to "Contact", page_path("contact"), class: 'blue-text'
-  - if user_signed_in?
-    li= nav_link_to "Admin", rails_admin_path, class: 'blue-text'
