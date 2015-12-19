@@ -9,7 +9,7 @@ RSpec.describe 'application/_footer.slim', type: :view do
     rendered.should have_selector('footer')
   end
   it 'should have footer .footer-copyright' do
-    rendered.should have_selector('footer .footer-copyright')
+    rendered.should have_selector('footer .valign-wrapper')
   end
 
   it 'should show copyright' do

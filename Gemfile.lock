@@ -94,6 +94,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     erubis (2.7.0)
     excon (0.45.3)
     execjs (2.5.2)
@@ -375,6 +376,11 @@ GEM
     sexp_processor (4.5.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simplecov (0.10.0)
+      docile (~> 1.1.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     sitemap_generator (5.0.5)
       builder
     skylight (0.10.0)
@@ -462,6 +468,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda-matchers
+  simplecov
   sitemap_generator (~> 5.0.5)
   skylight
   slim-rails (~> 3.0.1)
