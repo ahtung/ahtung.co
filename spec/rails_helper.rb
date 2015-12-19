@@ -5,7 +5,7 @@ if ENV['CIRCLE_ARTIFACTS']
   SimpleCov.coverage_dir(dir)
 end
 
-SimpleCov.start
+SimpleCov.start 'rails'
 
 ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
