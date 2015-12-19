@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  # Robots
   mount_roboto
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :projects, only: [:index, :show]
 
+  # Users
+  devise_for :users
+
+  # Admin
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  # Home
+  resources :projects, only: [:index]
   root 'projects#index'
 
   # Sitemap
