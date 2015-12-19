@@ -3,16 +3,26 @@ module ApplicationHelper
   def phone_number_link(text)
     sets_of_numbers = text.scan(/[0-9]+/)
     number = "+#{sets_of_numbers.join('-')}"
-    link_to "tel://#{number}", class: 'waves-effect btn amber lighten-1' do
-      '<i class="material-icons">phone</i>'.html_safe
+    link_to "tel://#{number}" do
+      content_tag :i, '', class: 'icon-phone'
     end
   end
 
   def facebook_link(page_path)
-    link_to 'f', "https://www.facebook.com/#{page_path}", class: 'white-text', target: '_blank'
+    link_to "https://www.facebook.com/#{page_path}", class: 'white-text', target: '_blank' do
+      content_tag :i, '', class: 'icon-facebook'
+    end
   end
 
   def twitter_link(page_path)
-    link_to 't', "https://twitter.com/#{page_path}", class: 'white-text', target: '_blank'
+    link_to "https://twitter.com/#{page_path}", class: 'white-text', target: '_blank' do
+      content_tag :i, '', class: 'icon-twitter'
+    end
+  end
+
+  def github_link(page_path)
+    link_to 'https://github.com/ahtung', class: 'white-text', target: '_blank' do
+      content_tag :i, '', class: 'icon-github-circled'
+    end
   end
 end
