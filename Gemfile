@@ -17,10 +17,10 @@ gem 'newrelic_rpm', '~> 3.12.0.288'
 gem 'foreman', '~> 0.78.0'
 gem 'rack-google-analytics', '~> 1.2.0'
 gem 'rails_admin', '~> 0.6.7'
-gem 'devise', '~> 3.4.1'
+gem 'devise', '~> 3.5.3'
 gem 'asset_sync', '~> 1.1.0'
 gem 'sitemap_generator', '~> 5.0.5'
-gem 'fog', '~> 1.30.0'
+gem 'fog', '~> 1.36.0'
 gem 'unicorn', '~> 4.9.0'
 gem 'roboto', '~> 0.2.0'
 gem 'rubocop'
@@ -36,12 +36,11 @@ gem 'high_voltage', '~> 2.4.0'
 gem 'skylight'
 
 group :development, :test do
-  gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
-  gem 'brakeman'
+  gem 'brakeman', '~> 3.1'
 end
 
 group :test do
