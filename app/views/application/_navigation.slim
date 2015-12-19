@@ -1,7 +1,9 @@
-= link_to root_path, class: "brand-logo valign" do
-  = image_tag 'ahtung'
-
-ul.right
-  li= nav_link_to "Work", root_path, { class: 'blue-text' }, { controller_segment: 1 }
-  li= nav_link_to "About", page_path("about"), class: 'blue-text'
-  li= nav_link_to "Contact", page_path("contact"), class: 'blue-text'
+.row
+  .col.s1.right-align
+    = link_to root_path, class: "brand-logo valign" do
+      = image_tag 'ahtung'
+  .col.s11.right-align
+    ul.right
+      li= nav_link_to "Work", root_path, { class: 'blue-text' }, { controller_segment: 1 }
+      li= nav_link_to "About", page_path("about"), class: 'blue-text'
+      li= nav_link_to "Contact", page_path("contact"), class: 'blue-text'
