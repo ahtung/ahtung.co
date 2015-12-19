@@ -52,4 +52,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery.transit', '~> 0.9.12'
   gem 'rails-assets-materialize'
   gem 'rails-assets-jquery.scrollTo'
+  gem 'rails-assets-fontello', '~> 3.0.0'
 end
