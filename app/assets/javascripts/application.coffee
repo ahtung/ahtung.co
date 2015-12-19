@@ -2,7 +2,6 @@
 #= require jquery_ujs
 #= require materialize
 #= require jquery.transit
-#= require contact
 #= require jquery.scrollTo
 
 $ ->
