@@ -23,7 +23,7 @@ gem 'sitemap_generator', '~> 5.0.5'
 gem 'fog', '~> 1.36.0'
 gem 'unicorn', '~> 4.9.0'
 gem 'roboto', '~> 0.2.0'
-gem 'rubocop'
+gem 'rubocop', '~> 0.35.1'
 gem 'redcarpet', '~> 3.3.3'
 gem 'faker'
 gem 'mapbox-rails'
@@ -38,7 +38,7 @@ gem 'skylight'
 group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.4.0'
   gem 'capybara'
   gem 'brakeman', '~> 3.1'
 end
@@ -46,7 +46,7 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
-  gem 'rspec_junit_formatter', '0.2.2'
+  gem 'rspec_junit_formatter', '0.2.3'
 end
 
 source 'https://rails-assets.org' do
