@@ -1,8 +1,8 @@
 = render 'hero'
-.container
+#work.container
   .row.center-align
     .col.s12
       h3.blue-text.uppercase= t('projects.our')
       p.grey-text= t('projects.how')
   ul.row
-    = render @projects
+    = render partial: 'projects/project', collection: @projects

@@ -13,6 +13,6 @@ RSpec.describe 'application/_footer.slim', type: :view do
   end
 
   it 'should show copyright' do
-    rendered.should have_content('© 2015 All rights reserved.')
+    rendered.should have_content('We would love to hear from youtfgpm © 2015 Ahtung - All rights reserved - Design by Madco')
   end
 end

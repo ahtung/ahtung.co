@@ -11,7 +11,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.0.4'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'high_voltage', '~> 2.3.0'
 gem 'slim-rails', '~> 3.0.1'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'newrelic_rpm', '~> 3.12.0.288'
@@ -34,6 +33,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'nav_lynx'
 gem 'meta-tags'
 gem 'factory_girl_rails'
+gem 'high_voltage', '~> 2.4.0'
 
 group :development, :test do
   gem 'byebug'
@@ -51,4 +51,5 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery.transit', '~> 0.9.12'
   gem 'rails-assets-materialize'
+  gem 'rails-assets-jquery.scrollTo'
 end

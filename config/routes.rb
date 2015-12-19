@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  # Robots
   mount_roboto
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :projects, only: [:index, :show]
 
-  root 'projects#index'
+  # Users
+  devise_for :users
+
+  # Admin
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # Sitemap
   constraints(format: 'xml') do

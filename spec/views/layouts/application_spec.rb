@@ -10,7 +10,7 @@ RSpec.describe 'layouts/application.slim', type: :view do
     response.should render_template(partial: '_header')
   end
   it 'should render menu partial' do
-    response.should render_template(partial: '_menu')
+    response.should render_template(partial: '_navigation')
   end
   it 'should render footer partial' do
     response.should render_template(partial: '_footer')

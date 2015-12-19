@@ -3,7 +3,7 @@
     = link_to root_path, class: "brand-logo valign" do
       = image_tag 'ahtung'
   .col.s11.right-align
-    ul.right
-      li= nav_link_to "Work", root_path, { class: 'blue-text' }, { controller_segment: 1 }
-      li= nav_link_to "About", '#about', class: 'blue-text'
-      li= nav_link_to "Contact", page_path("contact"), class: 'blue-text'
+    ul.right.nav-links
+      li= link_to 'Work', '#work', class: 'blue-text'
+      li= link_to 'About', '#about', class: 'blue-text'
+      li= link_to 'Contact', '#contact', class: 'blue-text'

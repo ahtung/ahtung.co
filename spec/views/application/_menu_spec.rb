@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'application/_menu.slim', type: :view do
+RSpec.describe 'application/_navigation.slim', type: :view do
   before :each do
     render
   end
