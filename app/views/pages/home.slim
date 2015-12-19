@@ -5,5 +5,8 @@
     .col.s12
       h3.blue-text.uppercase= t('projects.our')
       p.grey-text= t('projects.how')
-  ul.row
+  .row
     = render partial: 'projects/project', collection: @projects
+    - if @placeholders
+      - @placeholders.times do
+        = render partial: 'projects/placeholder'

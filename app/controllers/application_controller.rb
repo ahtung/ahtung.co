@@ -5,10 +5,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_projects
+  before_action :set_placeholders
 
   private
 
   def set_projects
     @projects = Project.all
+  end
+
+  def set_placeholders
+    con = @projects.count
+    con += 1 while con % 3 != 0
+    @placeholders = con - @projects.count
   end
 end
