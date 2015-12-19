@@ -1,14 +1,14 @@
-
 .hero-container.valign-wrapper.blue-background
   h2.valign.white-text.center Code for simplicity
   .hero-image
-.row#about
-  .col.s12.center
-    h1.blue-text = t('about.h1')
-  .col.s12.center
-    h4.grey-text = t('about.h4')
-  .col.s12.center
-    p.light-grey-text = t('about.p')
-  .col.s12.center
-    p
-      = link_to t('about.github'), 'https://github.com/ahtung', class: 'btn-large waves-effect waves-light blue', target: '_blank'
+.row#about.valign-wrapper
+  .valign
+    .col.s12.center
+      h1.blue-text = t('about.h1')
+    .col.s12.center
+      h4.grey-text = t('about.h4')
+    .col.s12.center
+      p.light-grey-text = t('about.p')
+    .col.s12.center
+      p
+        = link_to t('about.github'), 'https://github.com/ahtung', class: 'btn-large waves-effect waves-light blue', target: '_blank'
