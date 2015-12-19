@@ -1,6 +1,7 @@
 $black: #000;
 $yellow: #F8D134;
 $blue: #1c71f6;
+$grey: #58595B;
 
 @mixin lane {
   font-family: 'Lane Upper';
@@ -40,4 +41,16 @@ $blue: #1c71f6;
 
 .blue-text {
   color: $blue;
+}
+
+.grey-background {
+  background-color: $grey;
+}
+
+.grey-text {
+  color: $grey;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
