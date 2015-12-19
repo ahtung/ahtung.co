@@ -18,7 +18,7 @@ RSpec.describe 'application/_header.slim', type: :view do
     rendered.should have_selector('.navbar-fixed nav .nav-wrapper .brand-logo')
   end
   it 'should display logo'
-  it 'should display company name' do
-    rendered.should have_content('Ahtung')
+  it 'should display company links' do
+    rendered.should have_content('WorkAboutContact')
   end
 end

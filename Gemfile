@@ -11,7 +11,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.0.4'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'high_voltage', '~> 2.3.0'
 gem 'slim-rails', '~> 3.0.1'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'newrelic_rpm', '~> 3.12.0.288'
@@ -19,7 +18,6 @@ gem 'foreman', '~> 0.78.0'
 gem 'rack-google-analytics', '~> 1.2.0'
 gem 'rails_admin', '~> 0.6.7'
 gem 'devise', '~> 3.4.1'
-gem 'turbolinks', '~> 2.5.3'
 gem 'asset_sync', '~> 1.1.0'
 gem 'sitemap_generator', '~> 5.0.5'
 gem 'fog', '~> 1.30.0'
@@ -34,6 +32,8 @@ gem 'aws-sdk', '< 2.0'
 gem 'nav_lynx'
 gem 'meta-tags'
 gem 'factory_girl_rails'
+gem 'high_voltage', '~> 2.4.0'
+gem 'skylight'
 
 group :development, :test do
   gem 'byebug'
@@ -46,9 +46,13 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+  gem 'rspec_junit_formatter', '0.2.2'
 end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery.transit', '~> 0.9.12'
   gem 'rails-assets-materialize'
+  gem 'rails-assets-jquery.scrollTo'
+  gem 'rails-assets-fontello', '~> 3.0.0'
 end
