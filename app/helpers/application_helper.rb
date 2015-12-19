@@ -3,7 +3,7 @@ module ApplicationHelper
   def phone_number_link(text)
     sets_of_numbers = text.scan(/[0-9]+/)
     number = "+#{sets_of_numbers.join('-')}"
-    link_to "tel://#{number}" do
+    link_to "tel://#{number}", class: 'white-text' do
       content_tag :i, '', class: 'icon-phone'
     end
   end
@@ -23,6 +23,12 @@ module ApplicationHelper
   def github_link(page_path)
     link_to 'https://github.com/ahtung', class: 'white-text', target: '_blank' do
       content_tag :i, '', class: 'icon-github-circled'
+    end
+  end
+
+  def mail_link(user)
+    mail_to user, class: 'white-text' do
+      content_tag :i, '', class: 'icon-mail-alt'
     end
   end
 end
