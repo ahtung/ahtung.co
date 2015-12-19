@@ -21,5 +21,4 @@ $ ->
 
 
 init = () ->
-  $('.parallax').parallax()
   map = new Contact
