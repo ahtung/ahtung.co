@@ -36,7 +36,6 @@ gem 'high_voltage', '~> 2.4.0'
 gem 'skylight'
 
 group :development, :test do
-  gem 'web-console', '~> 3.0.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.4.0'
   gem 'capybara'
