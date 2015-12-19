@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_projects
-    @projects = Project.all
+    @projects = Project.published
   end
 
   def set_placeholders
