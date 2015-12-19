@@ -2,11 +2,11 @@
 a name='about'
 .row
   .col.s12.center
-    h1.blue-text We are adventurous
+    h1.blue-text = t('about.h1')
   .col.s12.center
-    h4.grey-text Our power is simple, clean and beautiful.
+    h4.grey-text = t('about.h4')
   .col.s12.center
-    p.light-grey-text We are a web agency who build awesome websites, API's, mobile applications and webservices. We contribute to a clear future.
+    p.light-grey-text = t('about.p')
   .col.s12.center
     p
-      = link_to 'Check us on github', 'https://github.com/ahtung', class: 'btn blue-background', target: '_blank'
+      = link_to t('about.github'), 'https://github.com/ahtung', class: 'btn blue-background', target: '_blank'
