@@ -34,6 +34,7 @@ gem 'nav_lynx'
 gem 'meta-tags'
 gem 'factory_girl_rails'
 gem 'high_voltage', '~> 2.4.0'
+gem 'skylight'
 
 group :development, :test do
   gem 'byebug'

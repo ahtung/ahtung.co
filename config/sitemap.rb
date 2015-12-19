@@ -6,10 +6,4 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.create do
   # Root
   add '/', changefreq: 'daily', priority: 1.0
-
-  # Pages
-  add '/pages/about', changefreq: 'daily', priority: 0.9
-  add '/pages/contact', changefreq: 'daily', priority: 0.9
-  add '/pages/stats', changefreq: 'daily', priority: 0.9
-  add '/pages/projects', changefreq: 'daily', priority: 0.9
 end
