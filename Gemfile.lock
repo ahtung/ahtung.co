@@ -257,7 +257,7 @@ GEM
     nav_lynx (1.1.1)
       rails (>= 3.1.0)
     nested_form (0.3.2)
-    newrelic_rpm (3.12.0.288)
+    newrelic_rpm (3.14.1.311)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
@@ -465,7 +465,7 @@ DEPENDENCIES
   mapbox-rails
   meta-tags (~> 2.1.0)
   nav_lynx
-  newrelic_rpm (~> 3.12.0.288)
+  newrelic_rpm (~> 3.14.1.311)
   paperclip (~> 4.3.2)
   pg (~> 0.18.4)
   rack-google-analytics (~> 1.2.0)
