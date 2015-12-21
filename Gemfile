@@ -34,6 +34,7 @@ gem 'meta-tags', '~> 2.1.0'
 gem 'factory_girl_rails'
 gem 'high_voltage', '~> 2.4.0'
 gem 'skylight'
+gem 'rollbar', '~> 2.4.0'
 
 group :development, :test do
   gem 'spring'
