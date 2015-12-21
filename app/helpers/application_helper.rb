@@ -1,5 +1,13 @@
 # ApplicationHelper
 module ApplicationHelper
+  def favicons
+    concat favicon_link_tag('apple-touch-icon-144x144.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '144x144')
+    concat favicon_link_tag('apple-touch-icon-114x114.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '114x114')
+    concat favicon_link_tag('apple-touch-icon-72x72.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '72x72')
+    concat favicon_link_tag('apple-touch-icon-precomposed.png', rel: 'apple-touch-icon', type: 'image/png')
+    concat favicon_link_tag('favicon.ico', rel: 'shortcut icon')
+  end
+
   def phone_number_link(text)
     sets_of_numbers = text.scan(/[0-9]+/)
     number = "+#{sets_of_numbers.join('-')}"
