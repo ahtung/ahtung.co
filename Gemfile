@@ -35,6 +35,7 @@ gem 'factory_girl_rails'
 gem 'high_voltage', '~> 2.4.0'
 gem 'skylight'
 gem 'rollbar', '~> 2.4.0'
+gem 'i18n-tasks', '~> 0.9.2'
 
 group :development, :test do
   gem 'spring'
