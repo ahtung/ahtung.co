@@ -12,7 +12,14 @@ en:
     troubles: Troubles
     website: Website
   footer:
+    copyright: Copyright
     title: Title
   projects:
     how: How
     our: Our
+    soon: Soon
+  site:
+    about: About
+    contact: Contact
+    motto: Code for simplicity
+    work: Work
