@@ -1,6 +1,7 @@
 .hero-container.valign-wrapper
-  h2.valign.white-text.center Code for simplicity
+  h2.valign.white-text.center = t('site.motto')
   .hero-image
+
 .row#about.valign-wrapper
   .valign
     .col.s12.center
@@ -10,5 +11,4 @@
     .col.s12.center
       p.light-grey-text = t('about.p')
     .col.s12.center
-      p
-        = link_to t('about.github'), 'https://github.com/ahtung', class: 'btn-large waves-effect waves-light blue', target: '_blank'
+      p = link_to t('about.github'), 'https://github.com/ahtung', class: 'btn-large waves-effect waves-light blue', target: '_blank'

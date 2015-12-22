@@ -5,6 +5,5 @@
         = image_tag 'ahtung.png'
     .col.s11
       ul.right.nav-links.hide-on-med-and-down
-        li= link_to 'Work', '#work', class: 'blue-text'
-        li= link_to 'About', '#about', class: 'blue-text'
-        li= link_to 'Contact', '#contact', class: 'blue-text'
+        - %w(work about contact).each do |link|
+          li = link_to t("site.#{link}"), "##{link}", class: 'blue-text'

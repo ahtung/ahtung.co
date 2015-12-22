@@ -6,6 +6,7 @@ class Project < ActiveRecord::Base
   # Scopes
   scope :published, -> { where(published: true) }
 
+  # :nocov:
   # Rails admin
   rails_admin do
     edit do
@@ -15,4 +16,5 @@ class Project < ActiveRecord::Base
       field :published, :boolean
     end
   end
+  # :nocov:
 end
