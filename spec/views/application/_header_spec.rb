@@ -16,12 +16,8 @@ RSpec.describe 'application/_header.slim', type: :view do
       it 'should render .navbar-fixed nav .nav-wrapper' do
         rendered.should have_selector('.navbar-fixed nav .nav-wrapper')
       end
-      it 'should render .navbar-fixed nav .nav-wrapper .brand-logo' do
-        rendered.should have_selector('.navbar-fixed nav .nav-wrapper .brand-logo')
-      end
-      it 'should display logo'
-      it 'should display company links' do
-        rendered.should have_content('WorkAboutContact')
+      it 'should render _navigation partial' do
+        expect(view).to render_template(partial: '_navigation')
       end
     end
   end
