@@ -16,6 +16,7 @@ require 'paperclip/matchers'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.include AbstractController::Translation
   config.include Paperclip::Shoulda::Matchers
   config.include FactoryGirl::Syntax::Methods
   config.include Shoulda::Matchers::ActiveModel, type: :model

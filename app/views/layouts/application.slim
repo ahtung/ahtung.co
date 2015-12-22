@@ -4,7 +4,7 @@ html lang="en"
     meta charset="utf-8"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
     = display_meta_tags site: 'Ahtung'
-    title= content_for?(:title) ? yield(:title) : "Ahtung"
+    title = content_for?(:title) ? yield(:title) : "Ahtung"
     = stylesheet_link_tag "application", "https://fonts.googleapis.com/icon?family=Material+Icons"
     = javascript_include_tag "application"
     = csrf_meta_tags
