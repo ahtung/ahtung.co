@@ -36,6 +36,9 @@ module Ahtung
         resource '/assets/*',
           headers: :any,
           methods: [:get]
+        resource '/fonts/*',
+          headers: :any,
+          methods: [:get]
       end
     end
   end
