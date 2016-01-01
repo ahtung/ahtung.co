@@ -251,8 +251,6 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
-    nav_lynx (1.1.1)
-      rails (>= 3.1.0)
     nested_form (0.3.2)
     newrelic_rpm (3.14.1.311)
     nokogiri (1.6.7.1)
@@ -458,7 +456,6 @@ DEPENDENCIES
   jbuilder (~> 2.3.2)
   jquery-rails (~> 4.0.5)
   meta-tags (~> 2.1.0)
-  nav_lynx
   newrelic_rpm (~> 3.14.1.311)
   paperclip (~> 4.3.2)
   pg (~> 0.18.4)
