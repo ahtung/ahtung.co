@@ -2,8 +2,8 @@
 set -x
 set -e
 
-export RAILS_ENV='staging'
-export RACK_ENV='staging'
+export RAILS_ENV='production'
+export RACK_ENV='production'
 
 [[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow
 git push git@heroku.com:ahtung-staging.git develop:master
