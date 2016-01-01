@@ -22,10 +22,10 @@
 
 @font-face {
   font-family: 'Fontello';
-  src: font-url('fontello/fonts/fontello.eot');
-  src: font-url('fontello/fonts/fontello.eot#iefix') format('embedded-opentype'),
-       font-url('fontello/fonts/fontello.woff') format('woff'),
-       font-url('fontello/fonts/fontello.svg#fontello') format('svg');
+  src: asset-url('fontello/fonts/fontello.eot');
+  src: asset-url('fontello/fonts/fontello.eot#iefix') format('embedded-opentype'),
+       asset-url('fontello/fonts/fontello.woff') format('woff'),
+       asset-url('fontello/fonts/fontello.svg#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
