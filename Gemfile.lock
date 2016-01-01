@@ -265,7 +265,6 @@ GEM
     pg (0.18.4)
     powerpack (0.1.1)
     rack (1.6.4)
-    rack-cors (0.4.0)
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
@@ -455,7 +454,6 @@ DEPENDENCIES
   newrelic_rpm (~> 3.14.1.311)
   paperclip (~> 4.3.2)
   pg (~> 0.18.4)
-  rack-cors
   rack-google-analytics (~> 1.2.0)
   rails (= 4.2.5)
   rails-assets-fontello (~> 3.0.0)!
