@@ -80,9 +80,8 @@ Rails.application.configure do
   # Google Analytics
   config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
-  # S3
-  config.action_controller.asset_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  config.assets.prefix = '/assets'
+  # Cloudfront
+  config.action_controller.asset_host = ENV['CDN']
 
   # Rails admin
   config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
