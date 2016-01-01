@@ -244,7 +244,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mapbox-rails (1.6.1.1)
     meta-tags (2.1.0)
       actionpack (>= 3.0.0)
     mime-types (2.99)
@@ -458,7 +457,6 @@ DEPENDENCIES
   http_accept_language (~> 2.0.5)
   jbuilder (~> 2.3.2)
   jquery-rails (~> 4.0.5)
-  mapbox-rails
   meta-tags (~> 2.1.0)
   nav_lynx
   newrelic_rpm (~> 3.14.1.311)
