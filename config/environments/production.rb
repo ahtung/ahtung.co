@@ -83,7 +83,7 @@ Rails.application.configure do
 
   # Cloudfront
   config.action_controller.asset_host = ENV['CDN']
-  config.font_assets.origin = ENV['CDN']
+  config.font_assets.origin = "http://*.ahtung.co"
 
   # Rails admin
   config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
