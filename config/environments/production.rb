@@ -58,9 +58,6 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
-
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -82,7 +79,7 @@ Rails.application.configure do
   config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
   # CDN
-  config.font_assets.origin = '*'
+  config.font_assets.origin = 'ahtung.co'
   config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
 end
