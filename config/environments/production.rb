@@ -81,7 +81,8 @@ Rails.application.configure do
   # Google Analytics
   config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
-  # S3
+  # CDN
+  config.font_assets.origin = 'http://ahtung.co'
   config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
 

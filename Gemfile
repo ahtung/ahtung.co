@@ -32,6 +32,7 @@ gem 'high_voltage', '~> 2.4.0'
 gem 'skylight'
 gem 'rollbar', '~> 2.7.0'
 gem 'http_accept_language', '~> 2.0.5'
+gem 'font_assets'
 
 group :development, :test do
   gem 'spring'
