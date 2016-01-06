@@ -80,6 +80,6 @@ Rails.application.configure do
 
   # CDN
   config.font_assets.origin = 'ahtung.co'
-  # config.action_controller.asset_host = ENV['CDN']
+  config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
 end
