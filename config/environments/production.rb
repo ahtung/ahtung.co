@@ -23,6 +23,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.static_cache_control = 'public, max-age=31536000'
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -80,20 +81,8 @@ Rails.application.configure do
   # Google Analytics
   config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
-  # S3
-  config.action_controller.asset_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  # CDN
+  config.font_assets.origin = '*'
+  config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
-
-  # Rails admin
-  config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
-
-  config.paperclip_defaults = {
-    storage: :s3,
-    s3_credentials: {
-      bucket: ENV['S3_BUCKET_NAME'],
-      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-      s3_host_name: 's3-eu-central-1.amazonaws.com'
-    }
-  }
 end
