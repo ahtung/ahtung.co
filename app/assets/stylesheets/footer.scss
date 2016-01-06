@@ -1,7 +1,6 @@
 @import 'globals';
 
 footer{
-  @include caviar;
   @include small_text;
   min-height: 40vh;
 }
