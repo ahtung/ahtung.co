@@ -33,7 +33,6 @@ gem 'skylight'
 gem 'rollbar', '~> 2.7.0'
 gem 'http_accept_language', '~> 2.0.5'
 gem 'font_assets'
-gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   gem 'spring'
