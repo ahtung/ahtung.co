@@ -28,5 +28,13 @@ module Ahtung
 
     # Include fonts folder to asset
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # CORS
+    config.middleware.insert_before 0, 'Rack::Cors' do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :options]
+      end
+    end
   end
 end
