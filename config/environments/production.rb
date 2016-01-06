@@ -85,7 +85,4 @@ Rails.application.configure do
   config.font_assets.origin = '*'
   config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
-
-  # Rails admin
-  config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
 end
