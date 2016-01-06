@@ -82,7 +82,7 @@ Rails.application.configure do
   config.middleware.use Rack::GoogleAnalytics, tracker: ENV['GOOGLE_ANALYTICS'] if ENV['GOOGLE_ANALYTICS'].present?
 
   # CDN
-  config.font_assets.origin = '*'
+  config.font_assets.origin = 'ahtung.co'
   config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
 end
