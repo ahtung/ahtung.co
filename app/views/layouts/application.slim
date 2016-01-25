@@ -5,7 +5,9 @@ html lang="en"
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"
     = display_meta_tags site: 'Ahtung'
     title = content_for?(:title) ? yield(:title) : "Ahtung"
-    = stylesheet_link_tag "application", "https://fonts.googleapis.com/icon?family=Material+Icons"
+    = stylesheet_link_tag "application", 
+      "https://fonts.googleapis.com/icon?family=Material+Icons",
+      "https://fonts.googleapis.com/css?family=Catamaran:400,100,300,200,500,700,800,600,900"
     = javascript_include_tag "application"
     = csrf_meta_tags
     = favicons
