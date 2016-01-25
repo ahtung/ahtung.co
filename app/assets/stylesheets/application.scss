@@ -11,8 +11,6 @@
  * file per style scope.
  *
  *= require fonts
- *= require globals
- *= require materialize
  *= require header
  *= require hero
  *= require footer
@@ -20,6 +18,11 @@
  *= require about
  *= require_self
  */
+
+@import 'materialize/components/color';
+@import 'globals';
+@import 'materialize';
+
 
 body {
   display: flex;

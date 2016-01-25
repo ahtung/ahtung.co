@@ -1,6 +1,6 @@
+$primary-color: #2475F2 !default;
 $black: #000;
 $yellow: #F8D134;
-$blue: #1c71f6;
 $grey: #58595B;
 $light-grey: #a6a8ab;
 $whitish: #f7f7f7;
@@ -30,11 +30,11 @@ $whitish: #f7f7f7;
 }
 
 .blue-background {
-  background-color: $blue;
+  background-color: $primary-color;
 }
 
 .blue-text {
-  color: $blue;
+  color: $primary-color;
 }
 
 .grey-background {
