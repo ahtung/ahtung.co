@@ -3,4 +3,8 @@
 footer{
   @include small_text;
   min-height: 40vh;
+
+  i{
+    font-size: 50px;
+  }
 }
