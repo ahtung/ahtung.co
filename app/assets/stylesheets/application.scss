@@ -11,7 +11,6 @@
  * file per style scope.
  *
  *= require fonts
- *= require globals
  *= require header
  *= require hero
  *= require footer
@@ -20,8 +19,8 @@
  *= require_self
  */
 
-@import "materialize/components/color";
-$primary-color: $blue !default;
+@import 'materialize/components/color';
+@import 'globals';
 @import 'materialize';
 
 
