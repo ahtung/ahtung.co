@@ -3,4 +3,5 @@
 footer{
   @include small_text;
   min-height: 40vh;
+  background-color: $primary-color !important;
 }
