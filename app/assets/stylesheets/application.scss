@@ -11,8 +11,6 @@
  * file per style scope.
  *
  *= require fonts
- *= require globals
- *= require materialize
  *= require header
  *= require hero
  *= require footer
@@ -21,7 +19,13 @@
  *= require_self
  */
 
+@import 'materialize/components/color';
+@import 'globals';
+@import 'materialize';
+
+
 body {
+  font-family: 'Catamaran', sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;

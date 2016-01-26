@@ -33,6 +33,7 @@ gem 'skylight'
 gem 'rollbar', '~> 2.7.0'
 gem 'http_accept_language', '~> 2.0.5'
 gem 'font_assets'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'spring'
@@ -49,7 +50,6 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery.transit', '~> 0.9.12'
-  gem 'rails-assets-materialize', '~> 0.97.3'
   gem 'rails-assets-jquery.scrollTo'
   gem 'rails-assets-fontello', '~> 3.0.0'
 end
