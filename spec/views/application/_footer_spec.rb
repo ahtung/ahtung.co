@@ -16,7 +16,7 @@ RSpec.describe 'application/_footer.slim', type: :view do
       end
 
       it 'should show copyright' do
-        rendered.should have_content(t('footer.copyright'))
+        rendered.should have_content(t('footer.copyright', link: 'Madco'))
       end
     end
   end
