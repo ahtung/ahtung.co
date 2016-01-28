@@ -1,4 +1,4 @@
 tr:
   footer:
     title: Bize ulasin
-    copyright: " © 2015 Ahtung - Tum haklari saklidir - Madco trafaindan tasarlanmistir"
+    copyright: " © 2015 Ahtung - Tum haklari saklidir - %{link} trafaindan tasarlanmistir"

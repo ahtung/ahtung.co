@@ -5,4 +5,4 @@ footer.page-footer.blues-text.white-text.center
         .valign.center style='width:100%;'
           h3 = t('footer.title')
           = render 'social_links'
-          p = t('footer.copyright')
+          p== t('footer.copyright', link: link_to('Madco', 'http://www.madco.nl/', class: 'white-text', target: '_blank'))
