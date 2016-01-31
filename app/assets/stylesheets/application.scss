@@ -45,3 +45,45 @@ main {
     display: inline
   }
 }
+
+@media #{$small-and-down} {
+  #work{
+    .row{
+      .project{
+        border-bottom: 1px solid $primary-color;
+        &::last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium-and-up} {
+  #work{
+    .row{
+      height:8vh;
+      .project{
+        border-right: 1px solid $primary-color;
+        margin-bottom:10px;
+        &:nth-child(2n) {
+          border-right: none;
+        }
+
+      }
+    }
+  }
+}
+
+@media #{$large-and-up} {
+  #work{
+    .row{
+      .project{
+        border-right: 1px solid $primary-color !important;
+        &:nth-child(3n) {
+          border-right: none !important;
+        }
+      }
+    }
+  }
+}
