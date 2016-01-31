@@ -6,6 +6,14 @@
 
 Official company website!
 
+# Develop
+
+    foreman start -f Procfile.dev -e Procfile.dev.env
+
+# Test
+
+    foreman run -e Procfile.dev.env rspec
+
 # Design
 
 Madco

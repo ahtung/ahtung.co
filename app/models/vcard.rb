@@ -8,7 +8,6 @@ class Vcard
 
   def send_card
     @client = Twilio::REST::Client.new ENV['TWILLO_SID'], ENV['TWILLO_TOKEN']
-    return true if @client.account.messages.create(from: '+12053154072', to: phone_number, body: 'hello').nil?
-    false
+    @client.account.messages.create(from: ENV['TWILIO_FROM'], to: phone_number, body: 'vcard')
   end
 end
