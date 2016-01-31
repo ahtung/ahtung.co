@@ -230,6 +230,7 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
+    jwt (1.5.2)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -406,6 +407,10 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.1)
     tins (1.6.0)
+    twilio-ruby (4.10.0)
+      builder (>= 2.1.2)
+      jwt (~> 1.0)
+      multi_json (>= 1.3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -465,6 +470,7 @@ DEPENDENCIES
   skylight
   slim-rails (~> 3.0.1)
   spring
+  twilio-ruby
   uglifier (~> 2.7.2)
   unicorn (~> 5.0.1)
 
