@@ -45,3 +45,42 @@ main {
     display: inline
   }
 }
+
+@media #{$small-and-down} {
+  #work{
+    .row{
+      .project{
+        border-bottom: 3px solid gray;
+        &::last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium-and-up} {
+  #work{
+    .row{
+      .project{
+        border-right: 3px solid gray;
+        &:nth-child(2n) {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+@media #{$large-and-up} {
+  #work{
+    .row{
+      .project{
+        border-right: 3px solid gray !important;
+        &:nth-child(3n) {
+          border-right: none !important;
+        }
+      }
+    }
+  }
+}
