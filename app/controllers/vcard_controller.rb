@@ -1,5 +1,5 @@
 class VcardController < ApplicationController
-  before_action :authenticate_user!, except: [:dunya, :onur]
+  before_action :authenticate_user!, except: [:download]
 
   def new
     @vcard = Vcard.new(body: 'Hi!')
@@ -14,12 +14,12 @@ class VcardController < ApplicationController
     end
   end
 
-  def dunya
-    send_file "#{Rails.public_path}/dunya_kirkali.vcard", type: 'text/vcard'
-  end
-
-  def onur
-    send_file "#{Rails.public_path}/onur_kucukkece.vcard", type: 'text/vcard'
+  def download
+    respond_to do |format|
+      format.vcf do
+        send_file "#{Rails.public_path}/#{params[:filename]}.vcf", type: 'text/vcard'
+      end
+    end
   end
 
   private

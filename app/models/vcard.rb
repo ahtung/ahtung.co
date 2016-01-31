@@ -14,7 +14,7 @@ class Vcard
   private
 
   def contact_vcard(contact)
-    return vcard_dunya_url(host: ENV['HOST']) if contact == 'Dunya'
-    return vcard_onur_url(host: ENV['HOST']) if contact == 'Onur'
+    return vcard_download_url(filename: 'dunya_kirkali', host: ENV['HOST']) if contact == 'Dunya'
+    return vcard_download_url(filename: 'onur_kucukkece', host: ENV['HOST']) if contact == 'Onur'
   end
 end
