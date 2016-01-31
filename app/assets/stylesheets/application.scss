@@ -50,7 +50,7 @@ main {
   #work{
     .row{
       .project{
-        border-bottom: 3px solid gray;
+        border-bottom: 1px solid $primary-color;
         &::last-child {
           border-bottom: none;
         }
@@ -62,11 +62,14 @@ main {
 @media #{$medium-and-up} {
   #work{
     .row{
+      height:8vh;
       .project{
-        border-right: 3px solid gray;
+        border-right: 1px solid $primary-color;
+        margin-bottom:10px;
         &:nth-child(2n) {
           border-right: none;
         }
+
       }
     }
   }
@@ -76,7 +79,7 @@ main {
   #work{
     .row{
       .project{
-        border-right: 3px solid gray !important;
+        border-right: 1px solid $primary-color !important;
         &:nth-child(3n) {
           border-right: none !important;
         }
