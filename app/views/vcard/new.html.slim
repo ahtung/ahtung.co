@@ -1,0 +1,9 @@
+h1 Add a new contact
+
+- flash.each do |type, message|
+  .alert
+    = message
+    
+= form_for @vcard, url: { action: 'create' } do |f|
+  = telephone_field(:contact, :phone)
+  = f.submit 'Send'
