@@ -2,7 +2,7 @@ class VcardController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @vcard = Vcard.new
+    @vcard = Vcard.new(body: 'Hi!')
   end
 
   def create
