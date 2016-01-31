@@ -82,6 +82,4 @@ Rails.application.configure do
   config.font_assets.origin = 'ahtung.co'
   # config.action_controller.asset_host = ENV['CDN']
   config.assets.prefix = '/assets'
-
-  config.action_mailer.default_url_options = { host: ENV['HOST'] }
 end
