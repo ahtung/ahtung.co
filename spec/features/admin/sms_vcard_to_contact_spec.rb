@@ -9,6 +9,7 @@ RSpec.describe 'SMS VCard to Contact', type: :feature do
     fill_in 'user_password', with: user.password
     click_on 'Log in'
     fill_in 'vcard_phone_number', with: '+31626689471'
+    fill_in 'vcard_body', with: 'Hello World'
     click_on 'Send'
     expect(page).to have_content('Sent')
   end
