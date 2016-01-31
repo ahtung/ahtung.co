@@ -13,9 +13,8 @@ class Vcard
 
   private
 
-  def contact_vcard( contact )
-    return "#{root_url(host: ENV['HOST'])}/dunya_kirkali.vcard" if contact == 'Dunya'
-    return "#{root_url(host: ENV['HOST'])}/onur_kucukkece.vcard" if contact == 'Onur'
+  def contact_vcard(contact)
+    return vcard_dunya_url(host: ENV['HOST']) if contact == 'Dunya'
+    return vcard_onur_url(host: ENV['HOST']) if contact == 'Onur'
   end
-
 end
