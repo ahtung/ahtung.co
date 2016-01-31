@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # VCard
   get '/vcard', to: 'vcard#new', as: :vcard
-  get '/vcard/download/:filename', to: 'vcard#download'
+  get '/vcard/download/:filename', to: 'vcard#download', as: :vcard_download
   post '/vcard', to: 'vcard#create'
 
   match '*path', via: :all, to: 'errors#not_found', constraints: CloudfrontConstraint.new
