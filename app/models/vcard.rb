@@ -4,7 +4,7 @@ class Vcard
   include ActiveModel::Validations
   include ActiveModel::Serialization
 
-  attr_accessor :phone_number
+  attr_accessor :phone_number, :body
 
   def send_card
     @client = Twilio::REST::Client.new ENV['TWILLO_SID'], ENV['TWILLO_TOKEN']
