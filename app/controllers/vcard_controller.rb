@@ -1,5 +1,5 @@
 class VcardController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:dunya, :onur]
 
   def new
     @vcard = Vcard.new(body: 'Hi!')
