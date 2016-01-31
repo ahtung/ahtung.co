@@ -14,6 +14,14 @@ class VcardController < ApplicationController
     end
   end
 
+  def dunya
+    send_file "#{Rails.public_path}/dunya_kirkali.vcard", type: 'text/vcard'
+  end
+
+  def onur
+    send_file "#{Rails.public_path}/onur_kucukkece.vcard", type: 'text/vcard'
+  end
+
   private
 
   def vcard_params
