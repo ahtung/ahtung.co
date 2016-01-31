@@ -18,4 +18,12 @@
             = label :vcard, :body
         .row
           .input-field.col.s12
+            = select :vcard, :contact, ['Dunya', 'Onur']
+            = label :vcard, :contact
+        .row
+          .input-field.col.s12
             = f.submit 'Send'
+
+coffee:
+  $(document).ready ->
+    $('select').material_select();
