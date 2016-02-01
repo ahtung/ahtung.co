@@ -7,6 +7,3 @@
       p.grey-text = t('projects.how')
   .row
     = render partial: 'projects/project', collection: @projects
-    - if @placeholders
-      - @placeholders.times do
-        = render partial: 'projects/placeholder'
