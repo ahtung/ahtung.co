@@ -1,0 +1,25 @@
+BEGIN:VCARD
+VERSION:4.0
+KIND:Organization
+GEO:39.95;-75.1667
+LANG:TR
+GENDER:M
+FN:Onur Küçükkeçe
+N:Onur Küçükkeçe;;;;
+EMAIL:onurkucukkece@ahtung.co
+BDAY:1984-06-09
+X_SKYPE:onurkucukkece
+SOUND:http://www.ahtung.co/onur.ogg
+PHOTO:http://www.ahtung.co/onurkucukkece.jpg
+TEL:00905374050051
+CALDARURI:http://calendar.ahtung.co/onurkucukkece
+TZ:Europe/Istanbul
+SOURCE:http://www.ahtung.co/onurkucukkece.vcf
+ORG;TITLE=CEO:Ahtung Teknoloji Ltd. Sti.
+LOGO;MEDIATYPE=image/png:http://www.ahtung.co/ahtung.svg
+ADR;TYPE=work:H. Edip Adivar Mah.;Meliksah Sk. 18.7;Sisli;Istanbul
+CATEGORIES:swimmer, biker
+URL:http://www.ahtung.co
+NOTE:TODO ODOT DOTO OTOD TODO
+REV:1454246690
+END:VCARD

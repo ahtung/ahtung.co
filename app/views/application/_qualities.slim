@@ -1,11 +1,10 @@
 #quality.whitish-background
   .container
     .row
-      - %w(website email ontime troubles solution secure).each do |block|
+      - %w(app challange flexibility opensource security solution).each do |block|
         .col.s12.m4
           .col.s2
-            h5
-              i.icon-desktop.blues-text
+            = image_tag "icon-#{block}.svg"
           .col.s10
-            h5.blues-text = t("about.#{block}")
-            p.grey-text = t('about.p')
+            h5.blues-text = t("about.#{block}.title")
+            p.grey-text = t("about.#{block}.content")

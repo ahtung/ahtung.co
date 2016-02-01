@@ -1,0 +1,25 @@
+BEGIN:VCARD
+VERSION:4.0
+KIND:Organization
+GEO:39.95;-75.1667
+LANG:TR
+GENDER:M
+FN:Dunya Kirkali
+N:Dunya Kirkali;;;;
+EMAIL:dunyakirkali@ahtung.co
+BDAY:1984-05-11
+X_SKYPE:aynudilakrik
+SOUND:http://www.ahtung.co/dunya.ogg
+PHOTO:http://www.ahtung.co/dunyakirkali.jpg
+TEL:0031626689471
+CALDARURI:http://calendar.ahtung.co/dunyakirkali
+TZ:Europe/Amsterdam
+SOURCE:http://www.ahtung.co/dunyakirkali.vcf
+ORG;TITLE=CEO:Ahtung Teknoloji Ltd. Sti.
+LOGO;MEDIATYPE=image/png:http://www.ahtung.co/ahtung.svg
+ADR;TYPE=work:H. Edip Adivar Mah.;Meliksah Sk. 18.7;Sisli;Istanbul
+CATEGORIES:swimmer, biker
+URL:http://www.ahtung.co
+NOTE:TODO ODOT DOTO OTOD TODO
+REV:1454246689
+END:VCARD

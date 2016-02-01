@@ -34,6 +34,7 @@ gem 'rollbar', '~> 2.7.0'
 gem 'http_accept_language', '~> 2.0.5'
 gem 'font_assets'
 gem 'materialize-sass'
+gem 'twilio-ruby'
 
 group :development, :test do
   gem 'spring'

@@ -1,12 +1,24 @@
 en:
   about:
-    email: Email
     github: Check us on github
     h1: We are adventurous
     h4: Our power is simple, clean and beautiful.
-    ontime: On time
     p: We are a web agency who build awesome websites, API's, mobile applications and webservices. We contribute to a clear future.
-    secure: Secure
-    solution: Solution
-    troubles: Troubles
-    website: Website
+    app:
+      title: Apps
+      content: We build OSX/PC Apps, Web Services, IOS Apps and Installations
+    challange:
+      title: Challange?
+      content: We get excited when we even hear the first 3 letters of that word
+    security:
+      title: Security
+      content: We know that things have to be secure so we let the heavy lifting to professionals
+    solution:
+      title: Elegant solutions
+      content: We try to come up with simple yet elegant solutions to complex problems
+    flexibility:
+      title: Agile
+      content: We are agile in our ways, testing in small iterations
+    opensource:
+      title: Open Source
+      content: We believe in a Free World and we try to make it happen
