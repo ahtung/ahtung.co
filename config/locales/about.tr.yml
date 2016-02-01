@@ -6,20 +6,20 @@ tr:
     challange: Vaktinde
     p: "iOS applicationlari, Webtasarimi; API kurulumu ve Custom yazilim alanlarindaki tecrubemizin birikimi."
     app:
-      title: Aplikasyonlar
-      content: OSX/PC Aplikasyonlari, Web Servisleri, IOS Aplikasyonlari ve Instalasyonlar insa ediyoruz
+      title: Uygulamalar
+      content: OSX/PC uygulamaları, web servisleri, iOS uygulamaları ve enstalasyonlar, oyunlar inşa ediyoruz
     challange:
       title: Hodri meydan!
-      content: O kelimeyi duydugumuzda kollarimizi siviyoruz
+      content: Bu kelimeyi duyduğumuzda kollarımızı sıvıyoruz
     security:
-      title: Guvenlik
-      content: Guvenlik mevzuatinin bilincinde olugumuzan profesyonellerle calismayi tercih eiyoruz
+      title: Güvenlik
+      content: Guvenlik mevzuatının bilincinde oldugumuzdan profesyonellerle calismayi tercih eiyoruz
     solution:
-      title: Zarif cozumler
-      content: Kompleks problemlere zarif cozumler uretmeye calisiyoruz
+      title: Zarif çözümler
+      content: Kompleks problemlere zarif çözumler üretmeye çalışıyoruz
     flexibility:
       title: Cevik
-      content: Metodlarimizda cevigiz
+      content: Metodlarımızda ceviğiz
     opensource:
-      title: Open Source
+      title: Açık Kaynak
       content: Ozgur bir Dunya'ya inaniyoruz
