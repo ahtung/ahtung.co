@@ -1,12 +1,25 @@
 tr:
   about:
-    app: Email
     github: Githubda bulusalim
     h1: Maceraciyiz
     h4: Gucumuz; temiz, sade ve sik olmamizda
     challange: Vaktinde
     p: "iOS applicationlari, Webtasarimi; API kurulumu ve Custom yazilim alanlarindaki tecrubemizin birikimi."
-    security: Guvenli
-    solution: Cozumcu
-    flexibility: Sorunlar
-    opensource: Websayfasi
+    app:
+      title: Aplikasyonlar
+      content: OSX/PC Aplikasyonlari, Web Servisleri, IOS Aplikasyonlari ve Instalasyonlar insa ediyoruz
+    challange:
+      title: Hodri meydan!
+      content: O kelimeyi duydugumuzda kollarimizi siviyoruz
+    security:
+      title: Guvenlik
+      content: Guvenlik mevzuatinin bilincinde olugumuzan profesyonellerle calismayi tercih eiyoruz
+    solution:
+      title: Zarif cozumler
+      content: Kompleks problemlere zarif cozumler uretmeye calisiyoruz
+    flexibility:
+      title: Cevik
+      content: Metodlarimizda cevigiz
+    opensource:
+      title: Open Source
+      content: Ozgur bir Dunya'ya inaniyoruz
