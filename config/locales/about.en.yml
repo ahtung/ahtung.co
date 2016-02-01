@@ -1,12 +1,12 @@
 en:
   about:
-    email: Email
+    app: Email
     github: Check us on github
     h1: We are adventurous
     h4: Our power is simple, clean and beautiful.
-    ontime: On time
+    challange: On time
     p: We are a web agency who build awesome websites, API's, mobile applications and webservices. We contribute to a clear future.
-    secure: Secure
+    security: Secure
     solution: Solution
-    troubles: Troubles
-    website: Website
+    flexibility: Troubles
+    opensource: Website

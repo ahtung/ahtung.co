@@ -1,12 +1,12 @@
 tr:
   about:
-    email: Email
+    app: Email
     github: Githubda bulusalim
     h1: Maceraciyiz
     h4: Gucumuz; temiz, sade ve sik olmamizda
-    ontime: Vaktinde
+    challange: Vaktinde
     p: "iOS applicationlari, Webtasarimi; API kurulumu ve Custom yazilim alanlarindaki tecrubemizin birikimi."
-    secure: Guvenli
+    security: Guvenli
     solution: Cozumcu
-    troubles: Sorunlar
-    website: Websayfasi
+    flexibility: Sorunlar
+    opensource: Websayfasi
