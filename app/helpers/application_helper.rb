@@ -8,6 +8,7 @@ module ApplicationHelper
       end
       [16, 32].each do |size|
         concat favicon_link_tag "favicon-#{size}x#{size}.png", rel: 'icon', type: 'image/png', sizes: "#{size}x#{size}"
+        concat favicon_link_tag "favicon-#{size}x#{size}.ico", rel: 'icon', type: 'image/ico', sizes: "#{size}x#{size}"
       end
     end
   end
