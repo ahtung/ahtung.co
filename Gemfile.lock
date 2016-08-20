@@ -200,7 +200,7 @@ GEM
       railties (>= 3.2, < 5.1)
     font_assets (0.1.12)
       rack
-    foreman (0.78.0)
+    foreman (0.82.0)
       thor (~> 0.19.1)
     formatador (0.2.5)
     globalid (0.3.7)
@@ -430,7 +430,7 @@ DEPENDENCIES
   faker
   fog (~> 1.36.0)
   font_assets
-  foreman (~> 0.78.0)
+  foreman (~> 0.82.0)
   high_voltage (~> 2.4.0)
   http_accept_language (~> 2.0.5)
   jbuilder (~> 2.3.2)
