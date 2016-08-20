@@ -207,7 +207,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
-    high_voltage (2.4.0)
+    high_voltage (3.0.0)
     http_accept_language (2.0.5)
     i18n (0.7.0)
     inflecto (0.0.2)
@@ -242,7 +242,7 @@ GEM
     minitest (5.9.0)
     multi_json (1.12.1)
     nested_form (0.3.2)
-    newrelic_rpm (3.14.1.311)
+    newrelic_rpm (3.16.1.320)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -431,13 +431,13 @@ DEPENDENCIES
   fog (~> 1.36.0)
   font_assets
   foreman (~> 0.82.0)
-  high_voltage (~> 2.4.0)
+  high_voltage (~> 3.0.0)
   http_accept_language (~> 2.0.5)
   jbuilder (~> 2.3.2)
   jquery-rails (~> 4.0.5)
   materialize-sass
   meta-tags (~> 2.1.0)
-  newrelic_rpm (~> 3.14.1.311)
+  newrelic_rpm (~> 3.16.1.320)
   pg (~> 0.18.4)
   rack-google-analytics (~> 1.2.0)
   rails (= 4.2.7.1)
