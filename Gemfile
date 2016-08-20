@@ -38,9 +38,9 @@ gem 'twilio-ruby'
 
 group :development, :test do
   gem 'spring'
-  gem 'rspec-rails', '~> 3.4.0'
+  gem 'rspec-rails', '~> 3.5.1'
   gem 'capybara'
-  gem 'brakeman', '~> 3.1'
+  gem 'brakeman', '~> 3.3.5'
 end
 
 group :test do
