@@ -246,7 +246,7 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
-    multi_json (1.11.2)
+    multi_json (1.12.1)
     nested_form (0.3.2)
     newrelic_rpm (3.14.1.311)
     nokogiri (1.6.7.1)
@@ -326,7 +326,7 @@ GEM
     roboto (0.2.0)
       actionpack (>= 3.0.0)
       rails (>= 3.1.0)
-    rollbar (2.7.1)
+    rollbar (2.12.0)
       multi_json
     rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
@@ -458,7 +458,7 @@ DEPENDENCIES
   rails_admin (~> 0.8.1)
   redcarpet (~> 3.3.3)
   roboto (~> 0.2.0)
-  rollbar (~> 2.7.0)
+  rollbar
   rspec-rails (~> 3.4.0)
   rspec_junit_formatter (= 0.2.3)
   rubocop (~> 0.35.1)
