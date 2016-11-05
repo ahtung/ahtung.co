@@ -31,6 +31,17 @@ body {
   flex-direction: column;
 }
 
+.barby-barcode {
+  width: 100%;
+  .barby-cell {
+    width: 1px;
+    padding: 15px 0;
+    &.on {
+      background-color: $primary-color;
+    }
+  }
+}
+
 main {
   flex: 1 0 auto;
   #map{
