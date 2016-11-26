@@ -2,7 +2,8 @@ tr:
   site:
     about: Hakkimizda
     contact: Bize ulasin
-    motto1: Kod, basitlik icin
-    motto2: Kod, basitlik icin
-    motto3: Kod, basitlik icin
+    mottos:
+      - Kod, basitlik icin
+      - Güvenilirliğin önkoşulu basitliktir
+      - Aletli bir budala bir budaladan daha da tehlikelidir
     work: Islerimiz
