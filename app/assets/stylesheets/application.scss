@@ -22,13 +22,20 @@
 @import 'materialize/components/color';
 @import 'globals';
 @import 'materialize';
-
+@import 'qualities';
+@import 'indicators';
 
 body {
   font-family: 'Catamaran', sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+svg {
+  g {
+    fill: $primary-color;
+  }
 }
 
 main {

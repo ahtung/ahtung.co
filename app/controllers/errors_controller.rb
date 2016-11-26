@@ -1,3 +1,4 @@
+# ErrorsController
 class ErrorsController
   def not_found
     raise ActiveRecord::RecordNotFound

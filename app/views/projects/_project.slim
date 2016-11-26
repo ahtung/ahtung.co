@@ -7,4 +7,5 @@
       p.blues-text = project.subtitle
   .row
     .col.s12
-      = link_to t('projects.website'), project.url, class: 'blues-text', target: :blank
+      = link_to project.url, class: 'blues-text', style: 'width:100%;display: inline-block;', target: :blank do
+        == project.barcode

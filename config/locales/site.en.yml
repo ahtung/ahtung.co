@@ -2,5 +2,8 @@ en:
   site:
     about: About
     contact: Contact
-    motto: Code for simplicity
+    mottos:
+      - Code for simplicity
+      - Simplicity is prerequisite for reliability
+      - A fool with a tool is a more dangerous fool
     work: Work
