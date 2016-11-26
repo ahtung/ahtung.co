@@ -21,7 +21,7 @@ module Ahtung
     config.time_zone = 'Istanbul'
 
     config.i18n.available_locales = [:tr, :en]
-    
+
     config.i18n.default_locale = :tr
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
