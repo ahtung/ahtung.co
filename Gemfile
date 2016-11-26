@@ -48,8 +48,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'coveralls', require: false
   gem 'shoulda-matchers'
-  gem 'simplecov', require: false
   gem 'rspec_junit_formatter', '0.2.3'
 end
 
