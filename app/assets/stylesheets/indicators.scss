@@ -1,0 +1,7 @@
+.indicators {
+  .indicator-item {
+    &.active {
+      background-color: $primary-color !important;
+    }
+  }
+}

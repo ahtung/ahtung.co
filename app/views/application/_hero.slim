@@ -1,6 +1,10 @@
-.hero-container.valign-wrapper
-  h2.valign.white-text.center = t('site.motto')
-  .hero-image
+.slider.hero-container
+  ul.slides
+    - (0..2).each do |slide|
+      li
+        = image_tag "hero-#{slide}.jpg"
+        .caption.center-align
+          h2.white-text.center = t("site.mottos")[slide]
 
 .row#about.valign-wrapper
   .valign
@@ -12,3 +16,8 @@
       p.light-grey-text= t('about.p')
     .col.s12.center
       p= link_to t('about.github'), 'https://github.com/ahtung', class: 'btn-large waves-effect blues-background', target: '_blank'
+
+
+
+javascript:
+  $('.slider').slider();
