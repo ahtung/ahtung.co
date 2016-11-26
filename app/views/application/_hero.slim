@@ -1,10 +1,10 @@
 .slider.hero-container
   ul.slides
     - (0..2).each do |slide|
-      li.valign-wrapper
+      li
         = image_tag "hero-#{slide}.jpg"
-        .caption.center-align.valign-wrapper
-          h2.valign.white-text.center = t("site.mottos")[slide]
+        .caption.center-align
+          h2.white-text.center = t("site.mottos")[slide]
 
 .row#about.valign-wrapper
   .valign
