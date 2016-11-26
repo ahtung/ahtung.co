@@ -44,7 +44,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'brakeman', '~> 3.3.5'
+  gem 'brakeman'
 end
 
 group :test do
