@@ -2,7 +2,8 @@ en:
   site:
     about: About
     contact: Contact
-    motto: Code for simplicity
-    quote: Simplicity is prerequisite for reliability
-    quote_two: A fool with a tool is a more dangerous fool
+    mottos:
+      - Code for simplicity
+      - Simplicity is prerequisite for reliability
+      - A fool with a tool is a more dangerous fool
     work: Work
