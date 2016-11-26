@@ -7,7 +7,7 @@ RSpec.describe 'application/_navigation.slim', type: :view do
         I18n.locale = locale
         render
       end
-      
+
       xit 'should have link to top' do
         rendered.should have_link(href: '#top')
       end

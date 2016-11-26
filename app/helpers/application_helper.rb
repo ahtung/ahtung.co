@@ -3,8 +3,9 @@ module ApplicationHelper
   def favicons
     capture do
       [57, 60, 72, 76].each do |size|
+        dsize = size * 2
         concat favicon_link_tag "apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}"
-        concat favicon_link_tag "apple-touch-icon-#{size}x#{size}@2x.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size * 2}x#{size * 2}"
+        concat favicon_link_tag "apple-touch-icon-#{size}x#{size}@2x.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{dsize}x#{dsize}"
       end
       [16, 32].each do |size|
         concat favicon_link_tag "favicon-#{size}x#{size}.png", rel: 'icon', type: 'image/png', sizes: "#{size}x#{size}"

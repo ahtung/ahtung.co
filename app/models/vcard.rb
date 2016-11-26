@@ -1,3 +1,4 @@
+# Vcard
 class Vcard
   extend ActiveModel::Naming
   include ActiveModel::Model

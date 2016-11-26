@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
   def set_placeholders
     con = @projects.count
-    con += 1 while con % 3 != 0
+    con += 1 while (con % 3).nonzero?
     @placeholders = con - @projects.count
   end
 end
