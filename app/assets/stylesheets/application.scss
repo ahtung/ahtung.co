@@ -31,14 +31,9 @@ body {
   flex-direction: column;
 }
 
-.barby-barcode {
-  width: 100%;
-  .barby-cell {
-    width: 1px;
-    padding: 15px 0;
-    &.on {
-      background-color: $primary-color;
-    }
+svg {
+  g {
+    fill: $primary-color;
   }
 }
 

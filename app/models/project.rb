@@ -1,6 +1,6 @@
 require 'barby'
 require 'barby/barcode/code_128'
-require 'barby/outputter/html_outputter'
+require 'barby/outputter/svg_outputter'
 
 # Project
 class Project < ActiveRecord::Base
@@ -11,7 +11,7 @@ class Project < ActiveRecord::Base
   scope :published, -> { where(published: true) }
 
   def barcode
-    Barby::Code128B.new(title).to_html
+    Barby::Code128B.new(title).to_svg
   end
 
   # :nocov:
