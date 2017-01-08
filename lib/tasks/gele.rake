@@ -6,6 +6,10 @@ namespace :gele do
     task results: :environment do
       timestamp = Chronic.parse('last saturday').strftime('%Y%m%d')
       url = "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/#{timestamp}.json"
+
+      # timestamp = Chronic.parse('last thursday').strftime('%Y%m%d')
+      # url = "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/#{timestamp}.json"
+
       content = open(url).read
       result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
       week = JSON.parse(content)['data']['hafta']
@@ -14,14 +18,16 @@ namespace :gele do
 
       content = {
         aps: {
-          alert: "#{week}. hafta Sayısal sonuçları:\n#{result}",
+          alert: "#{week}. hafta Sayısal Loto sonuçları:\n#{result}",
           sound: result,
           badge: 1
         }
       }
 
       payload = {
-        APNS_SANDBOX: content.to_json
+        default: '',
+        APNS_SANDBOX: content.to_json,
+        APN: content.to_json
       }
 
       resp = client.publish({

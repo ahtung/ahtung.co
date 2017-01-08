@@ -5,6 +5,7 @@ class Vcard
   include ActiveModel::Validations
   include ActiveModel::Serialization
   include Rails.application.routes.url_helpers
+  
   attr_accessor :phone_number, :body, :contact
 
   def send_card
