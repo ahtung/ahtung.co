@@ -18,7 +18,7 @@ namespace :gele do
 
       content = {
         aps: {
-          alert: "#{week}. hafta Sayısal sonuçları:\n#{result}",
+          alert: "#{week}. hafta Sayısal Loto sonuçları:\n#{result}",
           sound: result,
           badge: 1
         }
@@ -26,7 +26,8 @@ namespace :gele do
 
       payload = {
         default: '',
-        APNS_SANDBOX: content.to_json
+        APNS_SANDBOX: content.to_json,
+        APN: content.to_json
       }
 
       resp = client.publish({
