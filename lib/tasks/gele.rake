@@ -18,7 +18,7 @@ namespace :gele do
 
       content = {
         aps: {
-          alert: "#{week}. hafta Sayısal sonuçları:\n#{result}",
+          alert: "#{week}. hafta Sayısal Loto sonuçları:\n#{result}",
           sound: result,
           badge: 1
         }
