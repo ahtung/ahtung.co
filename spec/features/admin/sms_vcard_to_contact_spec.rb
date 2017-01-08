@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'SMS VCard to Contact', type: :feature do
   let(:user) { create(:user) }
 
-  it 'by entering contact phone number' do
+  xit 'by entering contact phone number' do
     visit vcard_path
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: user.password
