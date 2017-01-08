@@ -8,13 +8,13 @@ namespace :gele do
       url = "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/#{timestamp}.json"
       content = open(url).read
       result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
-      numbers = result.split(' - ')
+      week = JSON.parse(content)['data']['hafta']
 
       client = Aws::SNS::Client.new
 
       content = {
         aps: {
-          alert: "",
+          alert: "#{week}. hafta Sayısal sonuçları:\n#{result}",
           sound: result,
           badge: 1
         }
