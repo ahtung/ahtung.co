@@ -25,7 +25,7 @@ gem 'roboto'
 gem 'rubocop', '~> 0.44.1'
 gem 'redcarpet', '~> 3.3.3'
 gem 'faker'
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk', '~> 2'
 gem 'meta-tags', '~> 2.1.0'
 gem 'factory_girl_rails'
 gem 'high_voltage', '~> 3.0.0'
@@ -36,9 +36,11 @@ gem 'font_assets'
 gem 'materialize-sass'
 gem 'twilio-ruby'
 gem 'barby'
+gem 'chronic'
 
 group :development do
   gem 'bundler-audit'
+  gem 'pry'
 end
 
 group :development, :test do
