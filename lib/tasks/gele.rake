@@ -1,8 +1,8 @@
 require 'open-uri'
 
 namespace :gele do
-  namespace :lottery do
-    desc 'push lottery results'
+  namespace :sayisal do
+    desc 'push sayisal loto results'
     task results: :environment do
       timestamp = Chronic.parse('last saturday').strftime('%Y%m%d')
       url = "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/#{timestamp}.json"
