@@ -4,6 +4,7 @@ namespace :gele do
   namespace :sayisal do
     desc 'push sayisal loto results'
     task results: :environment do
+      return unless Date.today.sunday?
       timestamp = Chronic.parse('last saturday').strftime('%Y%m%d')
       url = "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/#{timestamp}.json"
 
@@ -38,6 +39,7 @@ namespace :gele do
   namespace :super do
     desc 'push lottery results'
     task results: :environment do
+      return unless Date.today.friday?
       timestamp = Chronic.parse('last thursday').strftime('%Y%m%d')
       url = "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/#{timestamp}.json"
 
