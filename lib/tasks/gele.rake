@@ -60,7 +60,7 @@ namespace :gele do
       payload = {
         default: '',
         APNS_SANDBOX: content.to_json,
-        APN: content.to_json
+        APNS: content.to_json
       }
 
       resp = client.publish({
