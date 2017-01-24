@@ -17,7 +17,7 @@ namespace :gele do
       content = {
         aps: {
           alert: "#{week}. hafta Sayısal Loto sonuçları:\n#{result}",
-          sound: result,
+          sound: 'default',
           badge: 1
         }
       }
@@ -52,7 +52,7 @@ namespace :gele do
       content = {
         aps: {
           alert: "#{week}. hafta Super Loto sonuçları:\n#{result}",
-          sound: result,
+          sound: 'default',
           badge: 1
         }
       }
