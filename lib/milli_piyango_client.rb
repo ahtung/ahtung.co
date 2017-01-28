@@ -9,7 +9,7 @@ class MilliPiyangoClient
 
   def push_results
     result_day = "#{day}?"
-    return unless Date.today.send(result_day)
+    return if d_day.future?
     content = open(url).read
     result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     week = JSON.parse(content)['data']['hafta']
@@ -23,12 +23,16 @@ class MilliPiyangoClient
   end
 
   def url
-    timestamp = Chronic.parse(chronic_sentence).strftime('%Y%m%d')
+    timestamp = d_day.strftime('%Y%m%d')
     [BASE_URL, @game_type, timestamp].join('/') << '.json'
   end
 
+  def d_day
+    Chronic.parse(chronic_sentence)
+  end
+
   def chronic_sentence
-    "this #{day}"
+    "this weeks #{day}"
   end
 
   def apns_data(week, result)
