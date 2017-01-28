@@ -26,7 +26,7 @@ class MilliPiyangoClient
   end
 
   def chronic_sentence
-    "this #{day(@game_type)}"
+    "this #{day}"
   end
 
   def apns_data(week, result)
