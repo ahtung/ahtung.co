@@ -69,12 +69,13 @@ namespace :gele do
     end
   end
 
-  def get_results(day, url)
-    next unless Date.today.sunday?
-    timestamp = Chronic.parse('last saturday').strftime('%Y%m%d')
-    url = "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/#{timestamp}.json"
+  def get_results(day, url, lottery_name)
+    result_day = "#{day}?"
+    next unless Date.today.send(result_day)
+    timestamp = Chronic.parse("this #{day}").strftime('%Y%m%d')
+    result_url = "#{url}/#{timestamp}.json"
 
-    content = open(url).read
+    content = open(result_url).read
     result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     week = JSON.parse(content)['data']['hafta']
 
