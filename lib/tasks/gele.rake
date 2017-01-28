@@ -69,7 +69,7 @@ namespace :gele do
     end
   end
 
-  def get_results
+  def get_results(day, url)
     next unless Date.today.sunday?
     timestamp = Chronic.parse('last saturday').strftime('%Y%m%d')
     url = "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/#{timestamp}.json"
