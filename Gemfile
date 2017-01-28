@@ -37,7 +37,6 @@ gem 'materialize-sass'
 gem 'twilio-ruby'
 gem 'barby'
 gem 'chronic'
-gem 'timecop'
 
 group :development do
   gem 'bundler-audit'
@@ -55,6 +54,7 @@ group :test do
   gem 'coveralls', require: false
   gem 'shoulda-matchers'
   gem 'rspec_junit_formatter', '0.2.3'
+  gem 'webmock'
 end
 
 source 'https://rails-assets.org' do
