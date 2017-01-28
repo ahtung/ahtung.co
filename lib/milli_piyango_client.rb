@@ -43,7 +43,7 @@ class MilliPiyangoClient
   def apns_data
     {
       default: '',
-      ENV['APNS_KEY'] => apns_content(week, @game_type, result).to_json,
+      ENV['APNS_KEY'] => apns_content.to_json,
     }
   end
 
@@ -58,7 +58,7 @@ class MilliPiyangoClient
   end
 
   def apns_alert
-    "#{type} Loto çekildi. Işte sonuçlar!\n#{result}"
+    "#{type} Loto çekildi. İşte sonuçlar!\n#{@result}"
   end
 
   def type
