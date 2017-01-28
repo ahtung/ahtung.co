@@ -32,7 +32,7 @@ class MilliPiyangoClient
   end
 
   def chronic_sentence
-    "this weeks #{day} 22:00"
+    "this weeks #{day}"
   end
 
   def apns_data(week, result)
