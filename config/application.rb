@@ -29,5 +29,6 @@ module Ahtung
 
     # Include fonts folder to asset
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
