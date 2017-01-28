@@ -16,7 +16,6 @@ namespace :gele do
   end
 
   def get_results(game_type)
-    lottery_name
     result_day = "#{day}?"
     next unless Date.today.send(result_day)
     timestamp = Chronic.parse("this #{day}").strftime('%Y%m%d')
@@ -29,7 +28,7 @@ namespace :gele do
     client = Aws::SNS::Client.new
 
     resp = client.publish({
-      message: apns_data(week, lottery_name, result).to_json,
+      message: apns_data(week, game_type, result).to_json,
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
@@ -48,17 +47,17 @@ namespace :gele do
     "http://www.mpi.gov.tr/sonuclar/cekilisler/"
   end
 
-  def apns_data(week, lottery_name, result)
+  def apns_data(week, game_type, result)
     {
       default: '',
-      ENV['APNS_KEY'] => apns_content(week, lottery_name, result).to_json,
+      ENV['APNS_KEY'] => apns_content(week, game_type, result).to_json,
     }
   end
 
-  def apns_content(week, lottery_name, result)
+  def apns_content(week, game_type, result)
     {
       aps: {
-        alert: "#{week}. hafta #{lottery_name} Loto sonuçları:\n#{result}",
+        alert: "#{week}. hafta #{game_type} Loto sonuçları:\n#{result}",
         sound: 'default',
         badge: 1
       }
