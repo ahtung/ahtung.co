@@ -5,14 +5,15 @@ class MilliPiyangoClient
 
   def initialize(game_type)
     @game_type = game_type
+    @result = ''
   end
 
   def push_results
     result_day = "#{day}?"
     return if d_day.future?
     content = open(url).read
-    result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
-    week = JSON.parse(content)['data']['hafta']
+    @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
+    push
   end
 
   private
@@ -33,23 +34,28 @@ class MilliPiyangoClient
 
   def chronic_sentence
     "this weeks #{day}"
+    "last weeks #{day}"
   end
 
-  def apns_data(week, result)
+  def apns_data
     {
       default: '',
       ENV['APNS_KEY'] => apns_content(week, @game_type, result).to_json,
     }
   end
 
-  def apns_content(week, result)
+  def apns_content
     {
       aps: {
-        alert: "#{week}. hafta #{@game_type} Loto sonuçları:\n#{result}",
+        alert: apns_alert,
         sound: 'default',
         badge: 1
       }
     }
+  end
+
+  def apns_alert
+    "#{@game_type} Loto çekildi. Işte sonuçlar!\n#{result}"
   end
 
   def aws_client
@@ -58,7 +64,7 @@ class MilliPiyangoClient
 
   def push
     aws_client.publish({
-      message: apns_data(week, @game_type, result).to_json,
+      message: apns_data(@game_type, @result).to_json,
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
