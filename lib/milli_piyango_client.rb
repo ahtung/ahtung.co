@@ -55,7 +55,12 @@ class MilliPiyangoClient
   end
 
   def apns_alert
-    "#{@game_type} Loto çekildi. Işte sonuçlar!\n#{result}"
+    "#{type} Loto çekildi. Işte sonuçlar!\n#{result}"
+  end
+
+  def type
+    return 'Sayısal' if @game_type == 'sayisal'
+    return 'Süper' @game_type == 'superloto'
   end
 
   def aws_client
