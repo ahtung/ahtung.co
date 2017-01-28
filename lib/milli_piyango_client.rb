@@ -60,7 +60,7 @@ class MilliPiyangoClient
 
   def type
     return 'Sayısal' if @game_type == 'sayisal'
-    return 'Süper' @game_type == 'superloto'
+    return 'Süper' if @game_type == 'superloto'
   end
 
   def aws_client
