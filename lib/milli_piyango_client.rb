@@ -6,18 +6,19 @@ class MilliPiyangoClient
   def initialize(game_type)
     @game_type = game_type
     @result = ''
+    @date = nil
   end
 
-  def push_results
+  def push_results(date = nil)
+    @date = date
     result_day = "#{day}?"
     return if d_day.future?
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     push
+    true
   rescue OpenURI::HTTPError => e
-    if e.message == '404 Not Found'
-      puts 'No results'
-    end
+    false
   end
 
   private
@@ -37,6 +38,7 @@ class MilliPiyangoClient
   end
 
   def chronic_sentence
+    return @date if @date
     "this weeks #{day}"
   end
 

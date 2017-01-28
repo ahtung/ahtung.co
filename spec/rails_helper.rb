@@ -12,6 +12,7 @@ end
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
+require 'webmock/rspec'
 
 ActiveRecord::Migration.maintain_test_schema!
 
@@ -27,6 +28,14 @@ RSpec.configure do |config|
   config.filter_run_excluding skip: true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
+
+  config.before(:each) do
+    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/20170127.json").
+      to_return(status: 404, body: '', headers: {})
+
+    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/20170121.json").
+      to_return(status: 200, body: { data: { rakamlarNumaraSirasi: '' } }.to_json, headers: {})
+  end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
