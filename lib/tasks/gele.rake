@@ -9,7 +9,7 @@ namespace :gele do
   end
 
   namespace :super do
-    desc 'push lottery results'
+    desc 'push super loto results'
     task results: :environment do
       MilliPiyangoClient.new.get_results(:superloto)
     end
