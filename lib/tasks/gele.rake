@@ -4,14 +4,14 @@ namespace :gele do
   namespace :sayisal do
     desc 'push sayisal loto results'
     task results: :environment do
-      get_results('saturday', 'http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal', 'Sayısal')
+      get_results(:sayisal)
     end
   end
 
   namespace :super do
     desc 'push lottery results'
     task results: :environment do
-      get_results('thursday', 'http://www.mpi.gov.tr/sonuclar/cekilisler/superloto', 'Süper')
+      get_results(:superloto)
     end
   end
 
