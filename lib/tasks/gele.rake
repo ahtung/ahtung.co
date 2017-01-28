@@ -39,7 +39,7 @@ namespace :gele do
     return 'thursday' if game_type == :superloto
   end
 
-  def url(game_type)
+  def url(game_type, timestamp)
     "#{base_url}#{game_type}/#{timestamp}.json"
   end
 
