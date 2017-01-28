@@ -78,5 +78,7 @@ class MilliPiyangoClient
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
+  rescue
+    true
   end
 end

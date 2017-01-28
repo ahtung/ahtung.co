@@ -15,7 +15,7 @@ RSpec.describe MilliPiyangoClient do
         expect(client.push_results(date)).to eq(false)
       end
 
-      xit 'Push results if all green' do
+      it 'Push results if all green' do
         date = Date.parse('21-01-2017')
         expect(client.push_results(date)).to eq(true)
       end
