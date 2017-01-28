@@ -5,6 +5,18 @@ class MilliPiyangoClient
     @game_type = game_type
   end
 
+  def get_results
+    result_day = "#{day}?"
+    next unless Date.today.send(result_day)
+    result_url = url(game_type)
+
+    content = open(result_url).read
+    result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
+    week = JSON.parse(content)['data']['hafta']
+  end
+
+  private
+
   def day
     return 'saturday' if @game_type == :sayisal
     return 'thursday' if @game_type == :superloto
@@ -34,5 +46,17 @@ class MilliPiyangoClient
         badge: 1
       }
     }
+  end
+
+  def aws_client
+    Aws::SNS::Client.new
+  end
+
+  def push
+    aws_client.publish({
+      message: apns_data(week, @game_type, result).to_json,
+      message_structure: 'json',
+      target_arn: ENV['PLATFORM_ENDPOINT']
+    })
   end
 end
