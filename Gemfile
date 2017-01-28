@@ -37,6 +37,7 @@ gem 'materialize-sass'
 gem 'twilio-ruby'
 gem 'barby'
 gem 'chronic'
+gem 'timecop'
 
 group :development do
   gem 'bundler-audit'

@@ -407,6 +407,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    timecop (0.8.1)
     tins (1.13.0)
     twilio-ruby (4.13.0)
       builder (>= 2.1.2)
@@ -476,6 +477,7 @@ DEPENDENCIES
   skylight
   slim-rails
   spring
+  timecop
   twilio-ruby
   uglifier (~> 2.7.2)
   unicorn (~> 5.0.1)
