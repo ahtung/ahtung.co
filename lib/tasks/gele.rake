@@ -80,24 +80,28 @@ namespace :gele do
 
     client = Aws::SNS::Client.new
 
-    content = {
+    resp = client.publish({
+      message: apns_data.to_json,
+      message_structure: 'json',
+      target_arn: ENV['PLATFORM_ENDPOINT']
+    })
+  end
+
+  def apns_data
+    {
+      default: '',
+      APNS_SANDBOX: apns_content.to_json,
+      APNS: apns_content.to_json
+    }
+  end
+
+  def apns_content
+    {
       aps: {
         alert: "#{week}. hafta Sayısal Loto sonuçları:\n#{result}",
         sound: 'default',
         badge: 1
       }
     }
-
-    payload = {
-      default: '',
-      APNS_SANDBOX: content.to_json,
-      APNS: content.to_json
-    }
-
-    resp = client.publish({
-      message: payload.to_json,
-      message_structure: 'json',
-      target_arn: ENV['PLATFORM_ENDPOINT']
-    })
   end
 end
