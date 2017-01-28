@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class MilliPiyangoClient
-  BASE_URL = "http://www.mpi.gov.tr/sonuclar/cekilisler/".freeze
+  BASE_URL = "http://www.mpi.gov.tr/sonuclar/cekilisler".freeze
 
   def initialize(game_type)
     @game_type = game_type
@@ -10,7 +10,7 @@ class MilliPiyangoClient
   def push_results
     result_day = "#{day}?"
     return unless Date.today.send(result_day)
-    content = OpenURI.new.open(url).read
+    content = open(url).read
     result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     week = JSON.parse(content)['data']['hafta']
   end
@@ -24,7 +24,7 @@ class MilliPiyangoClient
 
   def url
     timestamp = Chronic.parse(chronic_sentence).strftime('%Y%m%d')
-    %W(BASE_URL game_type timestamp).join('/') << '.json'
+    [BASE_URL, @game_type, timestamp].join('/') << '.json'
   end
 
   def chronic_sentence
