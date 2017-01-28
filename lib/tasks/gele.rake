@@ -1,17 +1,10 @@
 require 'open-uri'
 
 namespace :gele do
-  namespace :sayisal do
-    desc 'push sayisal loto results'
-    task results: :environment do
-      MilliPiyangoClient.new.get_results(:sayisal)
-    end
-  end
-
-  namespace :super do
-    desc 'push super loto results'
-    task results: :environment do
-      MilliPiyangoClient.new.get_results(:superloto)
-    end
+  desc 'push loto results'
+  task push_loto_results: :environment do |t, args|
+    game_type = args[:game_type]
+    milli_piyango_client = MilliPiyangoClient.new game_type
+    milli_piyango_client.push_results
   end
 end

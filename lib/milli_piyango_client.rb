@@ -5,7 +5,7 @@ class MilliPiyangoClient
     @game_type = game_type
   end
 
-  def get_results
+  def push_results
     result_day = "#{day}?"
     next unless Date.today.send(result_day)
     result_url = url(game_type)
