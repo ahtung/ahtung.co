@@ -30,13 +30,13 @@ RSpec.configure do |config|
   config.filter_run :focus
 
   config.before(:each) do
-    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/20170127.json").
+    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/19690105.json").
       to_return(status: 404, body: '', headers: {})
 
     stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/20170121.json").
       to_return(status: 200, body: { data: { rakamlarNumaraSirasi: '' } }.to_json, headers: {})
 
-    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/20170127.json").
+    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/19690105.json").
       to_return(status: 404, body: '', headers: {})
 
     stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/20170121.json").
