@@ -32,36 +32,4 @@ namespace :gele do
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
   end
-
-  def day(game_type)
-    return 'saturday' if game_type == :sayisal
-    return 'thursday' if game_type == :superloto
-  end
-
-  def url(game_type)
-    chronic_sentence = "this #{day(game_type)}"
-    timestamp = Chronic.parse(chronic_sentence).strftime('%Y%m%d')
-    "#{base_url}#{game_type}/#{timestamp}.json"
-  end
-
-  def base_url
-    "http://www.mpi.gov.tr/sonuclar/cekilisler/"
-  end
-
-  def apns_data(week, game_type, result)
-    {
-      default: '',
-      ENV['APNS_KEY'] => apns_content(week, game_type, result).to_json,
-    }
-  end
-
-  def apns_content(week, game_type, result)
-    {
-      aps: {
-        alert: "#{week}. hafta #{game_type} Loto sonuçları:\n#{result}",
-        sound: 'default',
-        badge: 1
-      }
-    }
-  end
 end

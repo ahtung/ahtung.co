@@ -1,3 +1,38 @@
 class MilliPiyangoClient
+  BASE_URL = "http://www.mpi.gov.tr/sonuclar/cekilisler/".freeze
 
+  def initialize(game_type)
+    @game_type = game_type
+  end
+
+  def day
+    return 'saturday' if @game_type == :sayisal
+    return 'thursday' if @game_type == :superloto
+  end
+
+  def url
+    timestamp = Chronic.parse(chronic_sentence).strftime('%Y%m%d')
+    %W(BASE_URL game_type timestamp).join('/') << 'json'
+  end
+
+  def chronic_sentence
+    "this #{day(@game_type)}"
+  end
+
+  def apns_data(week, result)
+    {
+      default: '',
+      ENV['APNS_KEY'] => apns_content(week, @game_type, result).to_json,
+    }
+  end
+
+  def apns_content(week, result)
+    {
+      aps: {
+        alert: "#{week}. hafta #{@game_type} Loto sonuçları:\n#{result}",
+        sound: 'default',
+        badge: 1
+      }
+    }
+  end
 end
