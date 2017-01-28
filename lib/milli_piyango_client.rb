@@ -8,9 +8,7 @@ class MilliPiyangoClient
   def push_results
     result_day = "#{day}?"
     return unless Date.today.send(result_day)
-    result_url = url(game_type)
-
-    content = open(result_url).read
+    content = open(url).read
     result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     week = JSON.parse(content)['data']['hafta']
   end
