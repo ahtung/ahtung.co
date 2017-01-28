@@ -28,20 +28,20 @@ namespace :gele do
     client = Aws::SNS::Client.new
 
     resp = client.publish({
-      message: apns_data.to_json,
+      message: apns_data(week, lottery_name, result).to_json,
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
   end
 
-  def apns_data
+  def apns_data(week, lottery_name, result)
     {
       default: '',
-      ENV['APNS_KEY'] => apns_content.to_json,
+      ENV['APNS_KEY'] => apns_content(week, lottery_name, result).to_json,
     }
   end
 
-  def apns_content
+  def apns_content(week, lottery_name, result)
     {
       aps: {
         alert: "#{week}. hafta #{lottery_name} Loto sonuçları:\n#{result}",
