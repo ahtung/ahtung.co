@@ -72,7 +72,7 @@ class MilliPiyangoClient
 
   def push
     aws_client.publish({
-      message: apns_data(@game_type, @result).to_json,
+      message: apns_data.to_json,
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
