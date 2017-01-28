@@ -1,5 +1,3 @@
-require 'open-uri'
-
 namespace :gele do
   desc 'push loto results'
   task :push_loto_results, [:game_type] => [:environment] do |t, args|

@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class MilliPiyangoClient
   BASE_URL = "http://www.mpi.gov.tr/sonuclar/cekilisler/".freeze
 
