@@ -18,8 +18,8 @@ class MilliPiyangoClient
   private
 
   def day
-    return 'saturday' if @game_type == :sayisal
-    return 'thursday' if @game_type == :superloto
+    return 'saturday' if @game_type == 'sayisal'
+    return 'thursday' if @game_type == 'superloto'
   end
 
   def url
