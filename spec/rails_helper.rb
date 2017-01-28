@@ -35,6 +35,15 @@ RSpec.configure do |config|
 
     stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/sayisal/20170121.json").
       to_return(status: 200, body: { data: { rakamlarNumaraSirasi: '' } }.to_json, headers: {})
+
+    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/20170127.json").
+      to_return(status: 404, body: '', headers: {})
+
+    stub_request(:get, "http://www.mpi.gov.tr/sonuclar/cekilisler/superloto/20170121.json").
+      to_return(status: 200, body: { data: { rakamlarNumaraSirasi: '' } }.to_json, headers: {})
+
+    stub_request(:post, "https://sns.eu-central-1.amazonaws.com/").
+      to_return(:status => 200, body: {}.to_xml, :headers => {})
   end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
