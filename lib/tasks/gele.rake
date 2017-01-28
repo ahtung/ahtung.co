@@ -24,8 +24,7 @@ namespace :gele do
 
       payload = {
         default: '',
-        APNS_SANDBOX: content.to_json,
-        APNS: content.to_json
+        ENV['APNS_KEY'] => content.to_json
       }
 
       resp = client.publish({
@@ -59,8 +58,7 @@ namespace :gele do
 
       payload = {
         default: '',
-        APNS_SANDBOX: content.to_json,
-        APNS: content.to_json
+        ENV['APNS_KEY'] => content.to_json
       }
 
       resp = client.publish({
