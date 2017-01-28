@@ -36,7 +36,7 @@ gem 'font_assets'
 gem 'materialize-sass'
 gem 'twilio-ruby'
 gem 'barby'
-gem 'chronic'
+gem 'chronic', '~> 0.10.2'
 
 group :development do
   gem 'bundler-audit'
