@@ -11,7 +11,7 @@ RSpec.describe MilliPiyangoClient do
       end
 
       it 'No results if 404' do
-        date = Date.parse('27-01-2017')
+        date = Date.parse('05-01-1969')
         expect(client.push_results(date)).to eq(false)
       end
 

@@ -446,7 +446,7 @@ DEPENDENCIES
   bundler (>= 1.8.4)
   bundler-audit
   capybara
-  chronic
+  chronic (~> 0.10.2)
   coffee-rails (~> 4.1.1)
   coveralls
   devise
@@ -493,4 +493,4 @@ RUBY VERSION
    ruby 2.2.4p230
 
 BUNDLED WITH
-   1.13.6
+   1.14.3

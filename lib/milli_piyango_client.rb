@@ -13,6 +13,11 @@ class MilliPiyangoClient
     @date = date
     result_day = "#{day}?"
     return if d_day.future?
+    if @date
+      return unless @date
+    else
+      return unless Date.today.send(result_day)
+    end
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     push
@@ -34,11 +39,11 @@ class MilliPiyangoClient
   end
 
   def d_day
+    return @date if @date
     Chronic.parse(chronic_sentence)
   end
 
   def chronic_sentence
-    return @date if @date
     "this weeks #{day}"
   end
 
