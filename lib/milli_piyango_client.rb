@@ -7,7 +7,7 @@ class MilliPiyangoClient
 
   def push_results
     result_day = "#{day}?"
-    next unless Date.today.send(result_day)
+    return unless Date.today.send(result_day)
     result_url = url(game_type)
 
     content = open(result_url).read
