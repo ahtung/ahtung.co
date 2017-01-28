@@ -39,7 +39,8 @@ namespace :gele do
   end
 
   def url(game_type)
-    timestamp = Chronic.parse("this #{day(game_type)}").strftime('%Y%m%d')
+    chronic_sentence = "this #{day(game_type)}"
+    timestamp = Chronic.parse(chronic_sentence).strftime('%Y%m%d')
     "#{base_url}#{game_type}/#{timestamp}.json"
   end
 
