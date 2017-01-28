@@ -98,7 +98,7 @@ namespace :gele do
   def apns_content
     {
       aps: {
-        alert: "#{week}. hafta Sayısal Loto sonuçları:\n#{result}",
+        alert: "#{week}. hafta #{lottery_name} Loto sonuçları:\n#{result}",
         sound: 'default',
         badge: 1
       }
