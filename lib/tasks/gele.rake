@@ -15,7 +15,8 @@ namespace :gele do
     end
   end
 
-  def get_results(day, url, lottery_name)
+  def get_results(game_type)
+    url, lottery_name
     result_day = "#{day}?"
     next unless Date.today.send(result_day)
     timestamp = Chronic.parse("this #{day}").strftime('%Y%m%d')
@@ -32,6 +33,11 @@ namespace :gele do
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
+  end
+
+  def day(game_type)
+    return 'saturday' if game_type == :sayisal
+    return 'thursday' if game_type == :superloto
   end
 
   def apns_data(week, lottery_name, result)
