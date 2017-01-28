@@ -14,6 +14,10 @@ class MilliPiyangoClient
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     push
+  rescue OpenURI::HTTPError => e
+    if e.message == '404 Not Found'
+      puts 'No results'
+    end
   end
 
   private
