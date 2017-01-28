@@ -18,8 +18,7 @@ namespace :gele do
   def get_results(game_type)
     result_day = "#{day}?"
     next unless Date.today.send(result_day)
-    timestamp = Chronic.parse("this #{day}").strftime('%Y%m%d')
-    result_url = "#{url}/#{timestamp}.json"
+    result_url = url(game_type)
 
     content = open(result_url).read
     result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
@@ -39,7 +38,8 @@ namespace :gele do
     return 'thursday' if game_type == :superloto
   end
 
-  def url(game_type, timestamp)
+  def url(game_type)
+    timestamp = Chronic.parse("this #{day(game_type)}").strftime('%Y%m%d')
     "#{base_url}#{game_type}/#{timestamp}.json"
   end
 
