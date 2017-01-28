@@ -10,12 +10,12 @@ RSpec.describe MilliPiyangoClient do
         expect(client.push_results(date)).to eq(nil)
       end
 
-      it 'No results if 404' do
+      xit 'No results if 404' do
         date = Date.parse('27-01-2017')
         expect(client.push_results(date)).to eq(false)
       end
 
-      it 'Push results if all green' do
+      xit 'Push results if all green' do
         date = Date.parse('21-01-2017')
         expect(client.push_results(date)).to eq(true)
       end
