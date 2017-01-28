@@ -91,8 +91,7 @@ namespace :gele do
   def apns_data
     {
       default: '',
-      APNS_SANDBOX: apns_content.to_json,
-      APNS: apns_content.to_json
+      ENV['APNS_KEY'] => apns_content.to_json,
     }
   end
 
