@@ -3,6 +3,7 @@
 #= require materialize
 #= require jquery.transit
 #= require jquery.scrollTo
+#= require hotjar
 
 $ ->
   $(document).on 'page:load', ->
