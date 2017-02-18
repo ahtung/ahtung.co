@@ -14,7 +14,7 @@ class MilliPiyangoClient
     @date = date
     result_day = "#{day}?"
     return if d_day.future?
-    return unless Date.today.send(result_day)
+    return if !Date.today.send(result_day) && !@test
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     push
