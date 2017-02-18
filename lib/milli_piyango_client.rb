@@ -3,7 +3,7 @@ require 'open-uri'
 class MilliPiyangoClient
   BASE_URL = "http://www.mpi.gov.tr/sonuclar/cekilisler".freeze
 
-  def initialize(game_type)
+  def initialize(game_type, test_env = false)
     @game_type = game_type
     @result = ''
     @date = nil
