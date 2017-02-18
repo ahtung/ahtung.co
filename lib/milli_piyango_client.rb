@@ -7,14 +7,13 @@ class MilliPiyangoClient
     @game_type = game_type
     @result = ''
     @date = nil
-    @test = ENV.fetch('PUSH_TEST', false)
   end
 
   def push_results(date = nil)
     @date = date
     result_day = "#{day}?"
     return if d_day.future?
-    return if !Date.today.send(result_day) && !@test
+    return if !Date.today.send(result_day) && !test?
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
     push
@@ -24,6 +23,10 @@ class MilliPiyangoClient
   end
 
   private
+
+  def test?
+    ENV.fetch('APNS_KEY', 'APNS_SANDBOX') == 'APNS_SANDBOX'
+  end
 
   def day
     return 'saturday' if @game_type == 'sayisal'
@@ -41,7 +44,7 @@ class MilliPiyangoClient
   end
 
   def chronic_sentence
-    return "last weeks #{day}" if @test
+    return "last weeks #{day}" if test?
     "this weeks #{day}"
   end
 
