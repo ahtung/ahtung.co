@@ -9,22 +9,30 @@ class MilliPiyangoClient
     @date = nil
   end
 
-  def push_results(date = nil)
-    @date = date
-    result_day = "#{day}?"
-    return if d_day.future?
-    return if !Date.today.send(result_day) && !test?
-    content = open(url).read
-    @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
-    push
-    true
+  def push_results
+    set_date
+    get_results && push
   rescue OpenURI::HTTPError => e
     false
   end
 
-  private
+  def get_results
+    return false unless correct_day?
+    content = open(url).read
+    @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
+  end
+
+  def correct_day?
+    return true if test?
+    Date.today.send("#{day}?")
+  end
+
+  def set_date
+    @date = Chronic.parse(chronic_sentence)
+  end
 
   def test?
+    return false if ENV['RAILS_ENV']
     ENV.fetch('APNS_KEY', 'APNS_SANDBOX') == 'APNS_SANDBOX'
   end
 
@@ -34,13 +42,8 @@ class MilliPiyangoClient
   end
 
   def url
-    timestamp = d_day.strftime('%Y%m%d')
+    timestamp = @date.strftime('%Y%m%d')
     [BASE_URL, @game_type, timestamp].join('/') << '.json'
-  end
-
-  def d_day
-    return @date if @date
-    Chronic.parse(chronic_sentence)
   end
 
   def chronic_sentence
@@ -85,6 +88,6 @@ class MilliPiyangoClient
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
   rescue
-    true
+    false
   end
 end
