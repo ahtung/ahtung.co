@@ -60,7 +60,7 @@ class MilliPiyangoClient
     {
       aps: {
         alert: apns_alert,
-        sound: 'default',
+        sound: ENV.fetch('PUSH_SOUND', 'chime'),
         badge: 1
       }
     }
