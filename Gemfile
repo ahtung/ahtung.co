@@ -54,7 +54,7 @@ group :test do
   gem 'coveralls', require: false
   gem 'shoulda-matchers'
   gem 'rspec_junit_formatter', '0.2.3'
-  gem 'webmock'
+  gem 'timecop'
 end
 
 source 'https://rails-assets.org' do
