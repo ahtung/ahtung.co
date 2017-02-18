@@ -6,45 +6,47 @@ class MilliPiyangoClient
   def initialize(game_type)
     @game_type = game_type
     @result = ''
-    @date = nil
   end
 
-  def push_results(date = nil)
-    @date = date
-    result_day = "#{day}?"
-    return if d_day.future?
-    if @date
-      return unless @date
-    else
-      return unless Date.today.send(result_day)
-    end
-    content = open(url).read
-    @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
-    push
-    true
+  def push_results
+    return false unless correct_day?
+    get_results && push
   rescue OpenURI::HTTPError => e
     false
   end
-
-  private
 
   def day
     return 'saturday' if @game_type == 'sayisal'
     return 'thursday' if @game_type == 'superloto'
   end
 
+  private
+
+  def lottery_day
+    today = Chronic.parse("last weeks #{day}") if push_test?
+    today = DateTime.now unless push_test?
+    today.strftime('%Y%m%d')
+  end
+
+  def correct_day?
+    return true if Rails.env.test?
+    return true if push_test?
+    Date.today.send("#{day}?")
+  end
+
+  def get_results
+    content = open(url).read
+    @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
+    true
+  end
+
+  def push_test?
+    return false if Rails.env.test?
+    ENV.fetch('APNS_KEY', 'APNS_SANDBOX') == 'APNS_SANDBOX'
+  end
+
   def url
-    timestamp = d_day.strftime('%Y%m%d')
-    [BASE_URL, @game_type, timestamp].join('/') << '.json'
-  end
-
-  def d_day
-    return @date if @date
-    Chronic.parse(chronic_sentence)
-  end
-
-  def chronic_sentence
-    "this weeks #{day}"
+    [BASE_URL, @game_type, lottery_day].join('/') << '.json'
   end
 
   def apns_data
@@ -78,12 +80,13 @@ class MilliPiyangoClient
   end
 
   def push
+    return true if Rails.env.test?
     aws_client.publish({
       message: apns_data.to_json,
       message_structure: 'json',
       target_arn: ENV['PLATFORM_ENDPOINT']
     })
   rescue
-    true
+    false
   end
 end
