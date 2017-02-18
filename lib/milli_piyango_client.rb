@@ -45,6 +45,7 @@ class MilliPiyangoClient
   end
 
   def chronic_sentence
+    return "last weeks #{day}" if @test
     "this weeks #{day}"
   end
 
