@@ -7,6 +7,7 @@ class MilliPiyangoClient
     @game_type = game_type
     @result = ''
     @date = nil
+    @test = test_env
   end
 
   def push_results(date = nil)
