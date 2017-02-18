@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe MilliPiyangoClient do
   %w(sayisal superloto).each do |game_type|
-    let!(:client) { MilliPiyangoClient.new(game_type) }
+    let(:client) { MilliPiyangoClient.new(game_type) }
 
     describe 'push_results' do
       it 'return if d_day in future' do
@@ -20,8 +20,8 @@ RSpec.describe MilliPiyangoClient do
       end
 
       it 'Push results if all green' do
-        saturday = Chronic.parse('saturday')
-        Timecop.freeze(saturday) do
+        lottery_day = Chronic.parse("last weeks #{client.day}")
+        Timecop.freeze(lottery_day) do
           expect(client.push_results).to eq(true)
         end
       end
