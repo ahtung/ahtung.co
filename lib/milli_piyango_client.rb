@@ -23,13 +23,14 @@ class MilliPiyangoClient
   private
 
   def lottery_day
-    today = DateTime.now
+    today = Chronic.parse("last weeks #{day}") if push_test?
+    today = DateTime.now unless push_test?
     today.strftime('%Y%m%d')
   end
 
   def correct_day?
-    return true if push_test?
     return true if Rails.env.test?
+    return true if push_test?
     Date.today.send("#{day}?")
   end
 
@@ -40,16 +41,12 @@ class MilliPiyangoClient
   end
 
   def push_test?
+    return false if Rails.env.test?
     ENV.fetch('APNS_KEY', 'APNS_SANDBOX') == 'APNS_SANDBOX'
   end
 
   def url
     [BASE_URL, @game_type, lottery_day].join('/') << '.json'
-  end
-
-  def chronic_sentence
-    return "last weeks #{day}" if test? || Rails.env.test?
-    "this weeks #{day}"
   end
 
   def apns_data
