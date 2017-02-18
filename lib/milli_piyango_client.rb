@@ -7,7 +7,7 @@ class MilliPiyangoClient
     @game_type = game_type
     @result = ''
     @date = nil
-    @test = ENV.fetch('TEST', false)
+    @test = ENV.fetch('PUSH_TEST', false)
   end
 
   def push_results(date = nil)
