@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class MilliPiyangoClient
-  BASE_URL = "http://www.mpi.gov.tr/sonuclar/cekilisler".freeze
+  BASE_URL = "http://www.millipiyango.gov.tr/sonuclar/cekilisler".freeze
 
   def initialize(game_type)
     @game_type = game_type
@@ -18,6 +18,8 @@ class MilliPiyangoClient
   def day
     return 'saturday' if @game_type == 'sayisal'
     return 'thursday' if @game_type == 'superloto'
+    return 'monday' if @game_type == 'onnumara'
+    return 'wednesday' if @game_type == 'sanstopu'
   end
 
   private
@@ -37,6 +39,7 @@ class MilliPiyangoClient
   def get_results
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
+    @result = @result.gsub(/<(.|\/.)>/, '').reverse.sub('-', '+').reverse
     true
   end
 
@@ -67,12 +70,14 @@ class MilliPiyangoClient
   end
 
   def apns_alert
-    "#{type} Loto çekildi. İşte sonuçlar!\n#{@result}"
+    "#{type} çekildi. İşte sonuçlar!\n#{@result}"
   end
 
   def type
-    return 'Sayısal' if @game_type == 'sayisal'
-    return 'Süper' if @game_type == 'superloto'
+    return 'Sayısal Loto' if @game_type == 'sayisal'
+    return 'Süper Loto' if @game_type == 'superloto'
+    return 'On Numara' if @game_type == 'onnumara'
+    return 'Şans Topu' if @game_type == 'sanstopu'
   end
 
   def aws_client
