@@ -18,6 +18,7 @@ class MilliPiyangoClient
   def day
     return 'saturday' if @game_type == 'sayisal'
     return 'thursday' if @game_type == 'superloto'
+    return 'monday' if @game_type == 'onnumara'
   end
 
   private
@@ -67,12 +68,13 @@ class MilliPiyangoClient
   end
 
   def apns_alert
-    "#{type} Loto çekildi. İşte sonuçlar!\n#{@result}"
+    "#{type} çekildi. İşte sonuçlar!\n#{@result}"
   end
 
   def type
-    return 'Sayısal' if @game_type == 'sayisal'
-    return 'Süper' if @game_type == 'superloto'
+    return 'Sayısal Loto' if @game_type == 'sayisal'
+    return 'Süper Loto' if @game_type == 'superloto'
+    return 'On Numara' if @game_type == 'onnumara'
   end
 
   def aws_client
