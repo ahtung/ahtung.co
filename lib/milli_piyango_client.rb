@@ -19,6 +19,7 @@ class MilliPiyangoClient
     return 'saturday' if @game_type == 'sayisal'
     return 'thursday' if @game_type == 'superloto'
     return 'monday' if @game_type == 'onnumara'
+    return 'wednesday' if @game_type == 'sanstopu'
   end
 
   private
@@ -38,6 +39,7 @@ class MilliPiyangoClient
   def get_results
     content = open(url).read
     @result = JSON.parse(content)['data']['rakamlarNumaraSirasi']
+    @result = @result.gsub(/<(.|\/.)>/, '').reverse.sub('-', '+').reverse
     true
   end
 
@@ -75,6 +77,7 @@ class MilliPiyangoClient
     return 'Sayısal Loto' if @game_type == 'sayisal'
     return 'Süper Loto' if @game_type == 'superloto'
     return 'On Numara' if @game_type == 'onnumara'
+    return 'Şans Topu' if @game_type == 'sanstopu'
   end
 
   def aws_client
