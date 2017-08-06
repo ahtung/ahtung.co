@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe MilliPiyangoClient do
-  %w(sayisal superloto).each do |game_type|
+  %w(sayisal superloto sanstopu onnumara).each do |game_type|
     let(:client) { MilliPiyangoClient.new(game_type) }
 
     describe 'push_results' do
