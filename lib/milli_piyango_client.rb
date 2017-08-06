@@ -18,6 +18,7 @@ class MilliPiyangoClient
   def day
     return 'saturday' if @game_type == 'sayisal'
     return 'thursday' if @game_type == 'superloto'
+    return 'monday' if @game_type == 'onnumara'
   end
 
   private
