@@ -352,8 +352,6 @@ GEM
       railties (>= 4.2.0, < 5.3)
     roboto (1.0.1)
       rails (>= 4.2)
-    rollbar (2.15.5)
-      multi_json
     rspec-core (3.7.0)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -487,7 +485,6 @@ DEPENDENCIES
   rails_admin
   redcarpet (~> 3.3.3)
   roboto
-  rollbar
   rspec-rails
   rspec_junit_formatter (= 0.2.3)
   rubocop (~> 0.44.1)
