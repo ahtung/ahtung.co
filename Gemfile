@@ -13,7 +13,6 @@ gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'rails_12factor', '~> 0.0.3'
-gem 'newrelic_rpm', '~> 3.16.1.320'
 gem 'foreman', '~> 0.82.0'
 gem 'rack-google-analytics', '~> 1.2.0'
 gem 'rails_admin'
