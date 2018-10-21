@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.5'
 
 gem 'bundler', '>= 1.8.4'
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.10'
 gem 'pg', '~> 0.18.4'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '~> 2.7.2'
